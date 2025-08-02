@@ -1,7 +1,9 @@
 ---
-title: "Portfolio item number 1"
-excerpt: "Short description of portfolio item number 1<br/><img src='/images/500x300.png'>"
+title: "Sim-To-Real Reinforcement Learning for Robot Navigation"
+excerpt: "1<br/><img src='/images/sim_to_real.png'>"
 collection: portfolio
 ---
 
-This is an item in your portfolio. It can be have images or nice text. If you name the file .md, it will be parsed as markdown. If you name the file .html, it will be parsed as HTML. 
+## What is Reinforcement Learning?
+Reinforcement learning is for the agent to learn how to make better decisions by choosing actions that maximize rewards over time. This RL loop outputs a sequence of state, action, reward and next state:
+![alt text](image.png)
