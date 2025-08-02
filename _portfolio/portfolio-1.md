@@ -11,5 +11,5 @@ Reinforcement learning is for the agent to learn how to make better decisions by
 
 ## Objective
 
-- Self-navigate from current position to a predefined target point with unknown Environment by using Reinforcement Learning
-- Sim-TO-Real Reinforcement Learning with Differential Robot Robot movement visualization Performance of RL model in real robot visualization
+- Self-navigate from current position to a predefined target point with unknown Environment by using Reinforcement Learning.
+- Sim-TO-Real Reinforcement Learning with Differential Robot Robot movement visualization Performance of RL model in real robot visualization.
