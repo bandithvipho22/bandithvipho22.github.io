@@ -35,7 +35,7 @@ Developing an AI-powered system for recognizing **Khmer Sign Language** and tran
 
 ### 🇹🇼 3D Human Pose Estimation (MHFusionNet)  
 **Research Intern at National Chung Cheng University, Taiwan**  
-**Duration**: March 2025 – July 2025 (4 months)   
+**Duration**: March, 2025 – July, 2025 (4 months)   
 Topic: *"MHFusionNet: Multiple Hypotheses Fusion-Based Approaches for 3D Human Pose Estimation"*  
 - Researched methods to fuse multiple 3D human pose predictions into a **single refined estimation**.  
 - Improved **accuracy and robustness** in 3D pose estimation tasks.  
@@ -43,7 +43,7 @@ Topic: *"MHFusionNet: Multiple Hypotheses Fusion-Based Approaches for 3D Human P
 
 ### 🤖 AI Farm Robotics Company – Internship #2  
 **Position**: AI Engineering Intern  
-**Duration**: August 2024 – November 2024 (3 months)  
+**Duration**: August, 2024 – November, 2024 (3 months)  
 **Project**: *Sim-to-Real Reinforcement Learning for Robot Navigation*  
 - Implemented **reinforcement learning algorithms** to train autonomous robot navigation from random positions to predefined target points in unknown environments.  
 - Used **ROS2 and Gazebo** for simulation and training.  
@@ -51,7 +51,7 @@ Topic: *"MHFusionNet: Multiple Hypotheses Fusion-Based Approaches for 3D Human P
 
 ### 🤖 AI Farm Robotics Company – Internship #1  
 **Position**: AI Engineering Intern  
-**Duration**: August 2023 – November 2023 (3 months)  
+**Duration**: August, 2023 – November, 2023 (3 months)  
 **Project**: *Robot Navigation using ROS2 and Nav2 Framework*  
 - Built **Gazebo and RViz environments** for simulation and testing.  
 - Used **SLAM Toolbox** to scan and generate the environment map.  
