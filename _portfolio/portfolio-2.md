@@ -61,7 +61,7 @@ Setup Realsense for Jetson Packages:
 - Install pytorch and torchvision (Available with JP 5.1.2)
 - Setup onnx for tensor RT conversion 
 
-# 3. Results
+# III. Results
 As shown in figure below, including:
 - **Inference Time:** The model processes each input in **21.8 ms** (see *Figure below*). This allows for quick and accurate detection, which is essential in a fast-paced environment like **Robocon**.
 - During object detection (see *Figure below*), the **GPU** runs at **79% usage** and maintains a stable temperature of **40°C**. This ensures the system can handle **high-resolution images** and **multiple objects** without slowing down.
@@ -69,7 +69,7 @@ As shown in figure below, including:
 
 ![deployment](/images/performance.png)
 
-# 4. Conclusion
+# IV. Conclusion
 This project aims to enable the robot to automatically catch and deliver balls to silos within 3 minutes for a Robocon game.
 
 Key points:
