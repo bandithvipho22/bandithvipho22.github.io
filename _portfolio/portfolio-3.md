@@ -6,6 +6,21 @@ collection: portfolio
 
 ![Sign Language](/images/ksl_proj_t2.png)
 
+# Table of Contents
+- [I. Introduction](#i-introduction)
+- [1.1. Objective](#11-objective)
+- [1.2. Scope of Work](#12-scope-of-work)
+- [II. Methodology](#ii-methodology)
+  - [2.1. Data Collection](#21-data-collection)
+  - [2.2. Sign Recognition Model](#22-sign-recognition-model)
+  - [2.3. Text-To-Speech Generation](#23-text-to-speech-generation)
+  - [2.4. Interface](#24-interface)
+    - [2.4.1. Server](#241-server)
+    - [2.4.2. Client](#242-client)
+- [III. Result and Discussion](#iii-result-and-discussion)
+- [IV. Achievements](#iv-achievements)
+- [V. Our Goals](#v-our-goals)
+
 ---
 
 # I. Introduction
