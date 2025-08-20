@@ -17,7 +17,6 @@ collection: portfolio
 - [III. Results](#iii-results)
 - [IV. Conclusion](#iv-conclusion)
 
-
 ---
 
 # I. Introduction
