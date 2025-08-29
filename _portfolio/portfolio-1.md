@@ -422,11 +422,9 @@ There are 2 models that we use to conduct the experiment in the simulation, “S
 ### 3.1.1. Model “SAC_waypoint02”
 The model trains around ”3 million timesteps” with “maximum episode 300”, Using an NVIDIA RTX 3050Ti GPU.
 
-<div align="center">
-
-![RL result 1](/images/rl_rs01.png)
-
-*Figure: Evaluation Episode length and Reward*
-
-</div>
+<p align="center">
+  <img src="images/rl_rs01.png" alt="RL result 1" width="500"/>
+  <br>
+  <em>Figure: Evaluation Episode length and Reward</em>
+</p>
 
