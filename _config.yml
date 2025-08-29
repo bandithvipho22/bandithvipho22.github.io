@@ -7,7 +7,7 @@
 # server process.
 
 # Basic Site Settings
-mathjax                  : true
+# mathjax                  : true
 locale                   : "en-US"
 site_theme               : "default"
 title                    : "LANG Bandithvipho / AI Specialist"
