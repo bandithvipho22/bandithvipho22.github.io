@@ -129,7 +129,7 @@ SAC trains a stochastic policy with entropy regularization, and explores in an o
 
 <div align="center">
 
-![SAC](/images/rl_SAC.png)
+![SAC]({{ site.baseurl }}/images/rl_SAC.png)
 
 *Figure: Soft Actor-Critic (SAC) Algorithm Overview*
 
