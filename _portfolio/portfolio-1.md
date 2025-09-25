@@ -19,11 +19,7 @@ Reinforcement learning is for the agent to learn how to make better decisions by
 ## 1.2. Study Background
 This project inspire from "[Tommaso Van Der Meer](https://github.com/TommasoVandermeer/Hospitalbot-Path-Planning)" which is using reinforcement learning for robot navigation in "Hospital World" gazebo, ROS2 frameworks for simulation.
 
-<div align="center">
-
 ![Reinforcement Env](/images/rl_env.png)
-
-</div>
 
 In Environment of "[Hospitalbot](https://github.com/TommasoVandermeer/Hospitalbot-Path-Planning/tree/humble/hospital_robot_spawner/worlds)", including some features with difference scenarios for training RL that exist on "[hospital_robot_spawner/hospitalbot_env.py](https://github.com/TommasoVandermeer/Hospitalbot-Path-Planning/blob/humble/hospital_robot_spawner/hospital_robot_spawner/hospitalbot_env.py)", including some features:
 - Random Robot location
@@ -52,11 +48,8 @@ The robot always starts each episode from the same, predetermined location in th
 ---
 In this work, as illustrated in the figure below, the RL agent is trained within a Gazebo simulation environment. The robot’s initial position is fixed (**blue dot**), while the target positions are randomized (**red dots**). These randomized target points are generated along a path, ensuring that the agent learns to navigate under diverse conditions rather than memorizing a single trajectory. This setup improves generalization, enabling the robot to adapt to different goal locations while maintaining robustness in path planning.
 
-<div align="center">
-
 ![RL Way-Points](/images/rl_waypoint.png)
 
-</div>
 
 ---
 **Software Requirement:**
@@ -81,11 +74,7 @@ The robot employed is a Pioneer 3AT with 4-wheel differential drive and a 180° 
 - Sim-to-real enables training in simulation and transferring the knowledge to real
 robot.
 
-<div align="center">
-
 ![Wifibot Env](/images/wifibot.png)
-
-</div>
 
 In figure above, illustrated the Wifibot research for navigation using sim-to-real reinforcement learning. Here is the research paper-based ([Resource](https://arxiv.org/pdf/2004.14684))
 
@@ -94,11 +83,7 @@ In figure above, illustrated the Wifibot research for navigation using sim-to-re
 - Self-navigate from current position to a predefined target point with unknown Environment by using Reinforcement Learning.
 - Sim-To-Real Reinforcement Learning with Differential Robot Robot movement visualization Performance of RL model in real robot visualization.
 
-<div align="center">
-
 ![rl objective](/images/rl_obj.png)
-
-</div>
 
 ## 1.5. Scope of Works
 In this project we involved with some step:
@@ -109,11 +94,7 @@ In this project we involved with some step:
 - Use SAC for training agent in simulation (Gazebo).
 - Hardware Implementation -> Deploy RL model into Algobot.
 
-<div align="center">
-
 ![scope of work](/images/rl_scopeofwork.png)
-
-</div>
 
 ---
 # II. Methodology
@@ -163,11 +144,7 @@ To train our RL agent, we employed the Soft Actor-Critic (SAC) algorithm. SAC is
 
 **Pseudocode:**
 
-<div align="center">
-
 ![Pseudocode](/images/rl_pscode.png)
-
-</div>
 
 - I used the **Soft Actor-Critic (SAC)** implementation from the [Stable-Baselines3](https://github.com/DLR-RM/stable-baselines3) framework. This library provided the core training setup, including policy and value networks, replay buffer, and entropy regularization.  
 - You can find the detailed documentation and examples [here](https://stable-baselines3.readthedocs.io/) for parameter fine-tuning and usage of the available functions.
@@ -181,13 +158,9 @@ In reinforcement learning (RL), setting up the environment is crucial as it defi
 - Gymnasium framework (an updated version of OpenAI Gym): is a framework that standardizes the creation, manipulation, and interaction of RL environments. This framework allows for a consistent interface across various types of environments, making it easier to train, test, and benchmark RL algorithms across different setups. 
 - Stable-Baselines3 library: is a popular Python library for implementing and managing reinforcement learning algorithms. It provides robust and optimized implementations of many commonly used RL algorithms, including Soft Actor-Critic (SAC), which is particularly well-suited for continuous control tasks like robotic movement.
 
-<div align="center">
-
 ![rl_gym](/images/rl_gym.png)
 
-*Figure: Reinforcement Learning Framework*
-
-</div>
+<p align="center"><em>Figure: Reinforcement Learning Framework</em></p>
 
 ### 2.2.2. Gazebo world configuration
 
@@ -346,13 +319,9 @@ We train the Reinforcement Learning (RL) model in a Gazebo simulation environmen
     - Reach target => reward + 10
     - Hit Obstacle => reward - 5
 
-<div align="center">
-
 ![RL Way-Points](/images/rl_waypoint.png)
 
-*Figure: Way-points Construction for 3 randoms path*
-
-</div>
+<p align="center"><em>Figure: Way-points Construction for 3 randoms path</em></p>
 
 ### 2.3.2. SAC Parameter Initialization
 We utilize the Soft Actor-Critic (SAC) algorithm from the **“Stable Baselines3”** library to train our reinforcement learning (RL) model. The selected training parameters are outlined in the table below.
@@ -420,11 +389,6 @@ There are 2 models that we use to conduct the experiment in the simulation, “S
 ### 3.1.1. Model “SAC_waypoint02”
 The model trains around ”3 million timesteps” with “maximum episode 300”, Using an NVIDIA RTX 3050Ti GPU.
 
-<div align="center">
-
 ![RL result 1](/images/rl_rs01.png)
 
-*Figure: Evaluation Episode length and Reward*
-
-</div>
-
+<p align="center"><em>Figure: Evaluation Episode length and Reward</em></p>
