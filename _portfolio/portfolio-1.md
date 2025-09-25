@@ -127,13 +127,11 @@ but the entropy-constrained variant is generally preferred by practitioners.
 
 SAC trains a stochastic policy with entropy regularization, and explores in an on-policy way. The entropy regularization coefficient $\alpha$ explicitly controls the explore-exploit tradeoff, with higher $\alpha$ corresponding to more exploration, and lower $\alpha$ corresponding to more exploitation. The right coefficient (the one which leads to the stablest / highest-reward learning) may vary from environment to environment, and could require careful tuning.
 
-<div align="center">
+<p align="center">
+  <img src="images/rl_SAC.png" alt="SAC" width="500"/>
+</p>
 
-![SAC]({{ site.baseurl }}/images/rl_SAC.png)
-
-*Figure: Soft Actor-Critic (SAC) Algorithm Overview*
-
-</div>
+<p align="center"><em>Figure: Soft Actor-Critic (SAC) Algorithm Overview</em></p>
 
 To train our RL agent, we employed the Soft Actor-Critic (SAC) algorithm. SAC is an off-policy, actor-critic reinforcement learning method, as illustrated in Figure above. Being off-policy means that the algorithm can learn not only from the actions taken by its current policy but also from experiences collected using different or past policies, which are stored in a replay buffer. This allows SAC to reuse data more efficiently compared to on-policy methods, making the training process more sample-efficient and stable.
 
