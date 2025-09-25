@@ -19,7 +19,7 @@ Reinforcement learning is for the agent to learn how to make better decisions by
 ## 1.2. Study Background
 This project inspire from "[Tommaso Van Der Meer](https://github.com/TommasoVandermeer/Hospitalbot-Path-Planning)" which is using reinforcement learning for robot navigation in "Hospital World" gazebo, ROS2 frameworks for simulation.
 
-![Reinforcement Env](/images/rl_env.png){: .center width="500px"}
+![Reinforcement Env](/images/rl_env.png)
 
 In Environment of "[Hospitalbot](https://github.com/TommasoVandermeer/Hospitalbot-Path-Planning/tree/humble/hospital_robot_spawner/worlds)", including some features with difference scenarios for training RL that exist on "[hospital_robot_spawner/hospitalbot_env.py](https://github.com/TommasoVandermeer/Hospitalbot-Path-Planning/blob/humble/hospital_robot_spawner/hospital_robot_spawner/hospitalbot_env.py)", including some features:
 - Random Robot location
@@ -108,7 +108,13 @@ but the entropy-constrained variant is generally preferred by practitioners.
 
 SAC trains a stochastic policy with entropy regularization, and explores in an on-policy way. The entropy regularization coefficient $\alpha$ explicitly controls the explore-exploit tradeoff, with higher $\alpha$ corresponding to more exploration, and lower $\alpha$ corresponding to more exploitation. The right coefficient (the one which leads to the stablest / highest-reward learning) may vary from environment to environment, and could require careful tuning.
 
+<!-- ![SAC](/images/rl_SAC.png) -->
+
+<p align="center">
+
 ![SAC](/images/rl_SAC.png)
+
+</p>
 
 <p align="center"><em>Figure: Soft Actor-Critic (SAC) Algorithm Overview</em></p>
 
