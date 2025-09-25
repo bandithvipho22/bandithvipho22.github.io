@@ -140,7 +140,7 @@ To train our RL agent, we employed the Soft Actor-Critic (SAC) algorithm. SAC is
 **Actor–Critic Components in Reinforcement Learning:**
 
 
-- **Actor**:  Chooses the best action $a_{t}$ to execute based on the current state $s_{t}$ of the environment. It represents the policy $\pi (a|s)$, which maps states to actions.
+- **Actor**:  Chooses the best action $a_{t}$ to execute based on the current state $s_{t}$ of the environment. It represents the policy $\pi (a | s)$, which maps states to actions.
 
 - **Critic (Q-function)**: Evaluates the action chosen by the actor by estimating the expected return (value) from taking action $a_{t}$ in state $s_{t}$. It essentially tells the actor **how good this choice was** by predicting the long-term reward.
 
@@ -157,7 +157,7 @@ To train our RL agent, we employed the Soft Actor-Critic (SAC) algorithm. SAC is
 **Interaction Loop** as shown in **Figure above**:
 
 1. The agent observes the current **state** $s_{t}$.  
-2. The **Actor** selects an **action** $a_t$ using the the policy $\pi (a|s)$.  
+2. The **Actor** selects an **action** $a_t$ using the the policy $\pi (a | s)$.  
 3. The **Environment** responds with a new **state** $s_{t+1}$ and a **reward** $r_{t}$.  
 4. The **Critic** evaluates how good the action was by estimating the value (Q-function).  
 5. The Actor updates its policy to improve future decisions.
