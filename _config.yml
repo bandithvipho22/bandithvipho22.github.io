@@ -7,7 +7,10 @@
 # server process.
 
 # Basic Site Settings
-mathjax                  : true
+# mathjax                  : true
+markdown: kramdown
+kramdown:
+  math_engine: mathjax
 locale                   : "en-US"
 site_theme               : "default"
 title                    : "LANG Bandithvipho / AI Specialist"
