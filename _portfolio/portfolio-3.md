@@ -1,7 +1,7 @@
 ---
 title: "Cambodia Sign Language Recognition and Translation Text-To-Speech"
 excerpt: "<br/><img src='/images/ksl_proj.png'>"
-collection: portfolio
+collection: portfolio-2
 ---
 
 ![Sign Language](/images/ksl_proj_t2.png)

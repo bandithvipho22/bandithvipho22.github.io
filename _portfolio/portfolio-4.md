@@ -1,7 +1,7 @@
 ---
 title: "MHFusionNet: Multiple Hypotheses Fusion-Based Approach For 3D Human Pose Estimation"
 excerpt: "<br/><img src='/images/MH1.png'>"
-collection: portfolio
+collection: portfolio-1
 ---
 
 ![MHFusionNet](/images/MH1.png)
