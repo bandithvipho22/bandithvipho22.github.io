@@ -392,3 +392,21 @@ The model trains around ”3 million timesteps” with “maximum episode 300”
 ![RL result 1](/images/rl_rs01.png)
 
 <p align="center"><em>Figure: Evaluation Episode length and Reward</em></p>
+
+After finished, the model training **"SAC_waypoint02"**, we conduct the experiment on robot in simulation by deploying **“10 episodes”** of RL Model After trained 3 Million Time-step in simulation by
+using default path from training.
+
+![RL result 001](/images/rl_result001.png)
+
+<p align="center"><em>Figure: Evaluation Result after deploy model in Robot Gazebo</em></p>
+
+### 3.1.2. Model “SAC_waypoint03”
+The model was trained over "3 million timesteps" with "maximum episode 500". To make the model more generalize we adjust and add complexity of environment, including:
+
+- In 3M time-steps: changed positions of the obstacles.
+- Increase value of friction
+
+
+![RL result 2](/images/rl_rs02.png)
+
+<p align="center"><em>Figure: Evaluation Episode length and Reward</em></p>
