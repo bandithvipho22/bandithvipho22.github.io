@@ -410,3 +410,177 @@ The model was trained over "3 million timesteps" with "maximum episode 500". To 
 ![RL result 2](/images/rl_rs02.png)
 
 <p align="center"><em>Figure: Evaluation Episode length and Reward</em></p>
+
+After, training the RL model we deployed our model by input deferent waypoint, it means the waypoint when we trained was different from the waypoint we used to deployment.
+
+- Deploy “10 episodes” of RL Model After trained 10 Million Time-step in simulation by using default path from training.
+
+![RL result 002](/images/rl_result002.png)
+
+<p align="center"><em>Figure: Deploy model in Robot Gazebo with default path</em></p>
+
+- Change waypoints, and deploy “10 episodes” of RL Model After trained 10 Million Time-
+step in simulation by using different path from training.
+
+![RL result 003](/images/rl_result003.png)
+
+<p align="center"><em>Figure: Deploy model in Robot Gazebo by changing the path</em></p>
+
+### 3.1.3. Results Comparison of both “SAC_waypoint02” and “SAC_waypoint03”
+
+After conducting experiments with both models, "SAC_waypoint02" and "SAC_waypoint03", we can analyze and compare their performance to determine the most suitable model for deployment on the real robot. Key performance metrics, such as reward convergence, training stability, sample efficiency, and success rate in reaching waypoints, are used to evaluate the effectiveness of each model. Additionally, specific deployment factors, like computational efficiency and robustness under different environmental conditions, are considered.
+
+### Results Comparision:
+
+<h2 align="center">SAC Model Evaluation Results</h2>
+<div align="center">
+<table border="1" cellspacing="0" cellpadding="5">
+  <tr>
+    <th>Model</th>
+    <th>Total Episode</th>
+    <th>Mean Reward</th>
+    <th>Std Reward</th>
+    <th>Mean episode length</th>
+    <th>Time for a episode</th>
+    <th>Completed Path</th>
+  </tr>
+  <tr>
+    <td>SAC_waypoint02</td>
+    <td>10</td>
+    <td>60</td>
+    <td>27.477</td>
+    <td>397.1</td>
+    <td>39.71s</td>
+    <td>5</td>
+  </tr>
+  <tr>
+    <td>SAC_waypoint03 (default path)</td>
+    <td>10</td>
+    <td>100</td>
+    <td>0</td>
+    <td>225.6</td>
+    <td>22.56s</td>
+    <td>10</td>
+  </tr>
+  <tr>
+    <td>SAC_waypoint03 (change path)</td>
+    <td>10</td>
+    <td>85</td>
+    <td>30.74</td>
+    <td>285.6</td>
+    <td>28.56s</td>
+    <td>8</td>
+  </tr>
+</table>
+</div>
+
+---
+
+- Total Episode: The number of test episodes (runs) used for evaluation. In your case, we evaluated each trained model over 10 episodes.
+- Mean Reward: The average total reward obtained across episodes. Higher mean reward generally means the agent performed better on the task.
+- Std Reward (Standard Deviation of Reward): Measures how much the rewards vary between episodes.
+  - Low std → the agent behaves consistently.
+  - High std → performance is unstable.
+- Mean Episode Length: The average number of timesteps per episode.
+  - Shorter episode length often means the agent completed the task faster.
+  - Longer episode length could mean either the agent is slower or struggling to finish.
+- Time for an Episode: The average real-world time it takes to complete one episode (wall-clock seconds). This depends on simulation speed and episode length.
+- Completed Path: The number of times the agent successfully reached the target (goal/waypoint) during evaluation episodes. This directly reflects task success.
+
+As a result, we can assume that model “SAC_waypoint03” perform better and capable to used for navigating other paths, not just the path it was trained on.
+
+## 3.2. Hardware Implementation
+In this section, we present the system diagram and hardware setup used for real robot testing. The hardware implementation is an essential step to validate the reinforcement learning (RL) policies trained in simulation and to ensure that they can be effectively transferred to a real-world environment.
+### 3.2.1. System BLock Diagram
+The robot is equipped with a Raspberry Pi (or equivalent onboard computer) running Micro-ROS. This acts as the bridge between low-level hardware (motors, encoders) and the higher-level control system. The Micro-ROS module receives odometry data (/position) and ensures synchronization with the external controller.
+
+![RL diagram](/images/rl_diagram.png)
+
+<p align="center"><em>Figure: System Block Diagram of RL for robot navigation</em></p>
+
+We used a Raspberry Pi 4B as the onboard processing unit to run four ROS 2 nodes: Micro-ROS, Odometry, IMU, and Laser (RPLidar A1). These nodes handled low-level sensing and state estimation of the robot. The Raspberry Pi collected raw sensor data, processed it locally, and then published the corresponding topics via SSH to an external computer for higher-level decision making.
+
+On the external computer, the Reinforcement Learning (RL) node was executed. This node deployed the trained SAC model and generated velocity commands (/cmd) for the robot based on the incoming state information. The commands were then sent back to the Raspberry Pi and relayed to the robot through the Micro-ROS interface for execution.
+
+This architecture enabled the Alogobot to successfully navigate through predefined waypoints in a real-world environment, while maintaining a clear separation between onboard sensing/control and external RL inference.
+
+### 3.2.2. Real Robot deployment
+After testing in both simulation and the real world, we found that the RL model reached 6 points,
+indicating potential for effective navigation, even though it did not complete the entire path.
+
+![RL demo](/images/rl_demo.png)
+
+<p align="center"><em>Figure: Implement RL model with Real Robot Algobot</em></p>
+
+In the table below, we can see in table above the model performance in simulation better then Real-world even we change the path for it, but in Real-world experiment can achieve only a half-path, the result in real-world seem so bad due to variation of environment, tolerance of electronic component, computational resource and sensor limitation.
+
+***Noted***: Click the Link here for my report documents and you can watch the video demo of both simulation and real robot. ([HERE](https://drive.google.com/drive/folders/1Xx778Jn0rlqk1LbfeiU1i2Y9yM70CALA?usp=drive_link))
+
+
+<h2 align="center">Simulation vs Real-world Results</h2>
+<div align="center">
+<table border="1" cellspacing="0" cellpadding="5">
+  <tr>
+    <th>Experiment</th>
+    <th>Total Episode</th>
+    <th>Mean Reward</th>
+    <th>Std Reward</th>
+    <th>Mean episode length</th>
+    <th>Time for a episode</th>
+    <th>Completed Path</th>
+  </tr>
+  <tr>
+    <td>Simulation</td>
+    <td>10</td>
+    <td>85</td>
+    <td>30.74</td>
+    <td>285.6</td>
+    <td>28.56s</td>
+    <td>8</td>
+  </tr>
+  <tr>
+    <td>Real-world</td>
+    <td>5</td>
+    <td>2.8</td>
+    <td>...</td>
+    <td>33.66</td>
+    <td>3.36s</td>
+    <td>Half-Path = 6 points</td>
+  </tr>
+</table>
+</div>
+
+----
+
+# IV. Challenge and Limitation
+## Challenge:
+
+Challenges while training:
+- Simulation may not fully replicate real-world physics, sensor noise.
+- Sensor data is often noiseless
+- Slower training times and Delay experimentation and model optimization cycles.
+- Model doesn’t generalize well.
+- Overestimating distances between waypoints, walls, or obstacles.
+
+Challenges while deploy in real robot:
+- Sim-to-real gap, sensor noise, delay and friction, dynamic change.
+- Delayed Response from Network Communication.
+- Real-Time Constraints. 
+
+## Limitation:
+
+As a result of this experiment, we can observe that our project has some limitations that affect its overall performance:
+- Reality Gap Between Simulation and Real World and Limited Computational Resources.
+- Model Generalization.
+- High Training TIme.
+- Zero-shot sim-to-real, may not scale well to larger or more complex environments Network Latency affect robot response times.
+
+# V. Conclusion
+This project shows the potential of using reinforcement learning (SAC) for autonomous robot
+navigation, with training in simulation and deployment in the real world. While promising,
+challenges like the reality gap, model generalization, and hardware limitations need to be ad-
+dressed for better real-world performance.
+
+## Personal Insight:
+This project lays a strong foundation for future development, with significant potential for autonomous navigation in dynamic, real-world environments. By addressing the challenges and
+refining the approach, the system can be made more robust and reliable for real-world applications.
