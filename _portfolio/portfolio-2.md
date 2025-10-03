@@ -89,4 +89,4 @@ Key points:
 - **Fast inference time (21.8 ms)** ensures quick and accurate detection, crucial for dynamic gameplay.
 - The system meets real-time requirements, allowing the robot (MR2) to respond promptly.
 
-✅ Overall, the model runs efficiently without causing slowdowns, making it suitable for competition use.
+✅ Overall, the model runs efficiently without causing slowdowns, making it suitable for competition use. Here, the testing video of the Robot in Gamefields. Click Here ([LINK](https://drive.google.com/drive/folders/1GVAVa5b6EfM1pL5e8ckKp0xuN51rKIBh?usp=drive_link)).
