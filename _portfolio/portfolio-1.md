@@ -110,3 +110,21 @@ Diffusion-based 3D Human Pose Estimation is the method Diffusion-based with Join
 <p align="center"><em>Figure: The overview of D3DP for multiple hypotheses generation</em></p>
 
 The proposed *JPMA* conduct aggregation at the joint level and makes use of the 2D prior information, both of which have been overlooked by previous approaches. D3DP used a mixed spatial temporal Transformer-based method, as the backbone.
+
+As shown in the Figure above, the D3DP model uses a denoising diffusion process to generate multiple diverse 3D human pose hypotheses from a Gaussian distribution. The main idea is to start with random noise and progressively denoise it using a trained model conditioned on 2D keypoints. As we can see in Figure 2.2, D3DP begins by sampling the noise vectors from a standard Gaussian distribution. These noisy vectors are treated as corrupted 3D poses and are fed into a denoiser 𝐷, which is conditioned on the 2D keypoints 𝑥 and
+timestep 𝑡. The denoiser learns to reconstruct the clean 3D pose hypotheses $\hat{y}_0$, this process can be expressed as:
+
+$$
+\hat{y}_0 = D(y_t, x, t) \tag{1}
+$$
+
+Where other processes will follow by formula (Eq. 2, 3, 4, 5) in D3DP [1], to generate multiple hypotheses, we repeat the sampling process $H$ times from a Gaussian distribution $N(0, I)$, giving us:
+
+$$
+\tilde{Y} = \{ \tilde{y}_0^{(1)}, \tilde{y}_0^{(2)}, \dots, \tilde{y}_0^{(H)} \} \tag{2}
+$$
+
+Each hypothesis $\hat{y}_0 \in \mathbb{R}^{J\times 3}$  , where $J$ is the number of joints. Optionally, this process can be refined over $K$ iteration ($K$: number of samplings timestep) using the DDIM
+strategy [15], which improves the accuracy of the generated hypotheses.
+
+
