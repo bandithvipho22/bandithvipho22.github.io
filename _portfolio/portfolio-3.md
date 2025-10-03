@@ -1,5 +1,5 @@
 ---
-title: "3. Object Detection using YOLO Model integrated with ROS2 for Autonomous Robot"
+title: "Object Detection using YOLO Model integrated with ROS2 for Autonomous Robot"
 excerpt: "<br/><img src='/images/abu_object_detection.png'>"
 collection: portfolio-3
 ---
