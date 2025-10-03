@@ -1,16 +1,19 @@
 ---
 title: "MHFusionNet: Multiple Hypotheses Fusion-Based Approach For 3D Human Pose Estimation"
-excerpt: "<br/><img src='/images/MHFusionNet00.png'>"
+excerpt: "<br/><img src='/images/MH_Intro.png'>"
 collection: portfolio-1
 ---
 
-![MHFusionNet](/images/MHFusionNet00.png)
+![MHFusionNet](/images/MH_Intro.png)
 
 # Table of Contents
 - [ABSTRACT](#Abstract)
 - [I. Introduction](#i-introduction)
-- [1.1. Objective](#11-objective)
-- [1.2. Scope of Work](#12-scope-of-work)
+    - [1.1. Research Background](#11-Research-Background)
+    - [1.2. Applications for 3D Human Pose Estimation](#12-Applications)
+    - [1.3. Problem of Statement](#13-Problem-statement)
+    - [1.4. Objection](#14-Objective)
+    - [1.5. Scope of works](#15-scope-of-works)
 - [II. Methodology](#ii-methodology)
 - [III. Result and Discussion](#iii-result-and-discussion)
 - [IV. Achievements](#iv-achievements)
@@ -55,13 +58,46 @@ interpret human movement in real-world applications.
 
 Recent work, such as D3DP with JPMA, improves accuracy by aggregating multiple hypotheses using camera parameters, but this limits practicality in real-world settings. To address this, we propose a camera-parameter-free fusion framework that combines multiple hypotheses from diffusion-based models, improving the accuracy and robustness of 3D skeleton prediction in practical applications.
 
-Human Pose Estimation (HPE) provides geometric and motion information of the human body and can be applied to a wide range of applications such as video animation, human-computer interactions (HCI) [5], action recognition [6], health care of elderly patients[7], gesture recognition [8], and video surveillance [9]. 3D HPE can be applied to a wide range of applications such as:
+## 1.2. Applications for 3D Human Pose Estimation
+3D Human Pose Estimation (HPE) provides geometric and motion information of the human body and can be applied to a wide range of applications such as video animation, human-computer interactions (HCI) [5], action recognition [6], health care of elderly patients[7], gesture recognition [8], and video surveillance [9]. 3D HPE can be applied to a wide range of applications such as:
 
 ![mh_3dhp](/images/MH_application.png)
 
 <p align="center"><em>Figure: Real-World Application 3D HPE</em></p>
 
-## 1.2. Objective
+## 1.3. Problem of Statement
+2D-to-3D lifting in human pose estimation remains an ill-posed problem due to depth ambiguity and occlusions in 2D inputs. While transformer-based methods like PoseFormer [10] attempt to reduce information loss, many approaches still predict only a single hypothesis, often failing under occlusion. To address this, recent works such as DiffPose [13], DDHPose [14], and MHFormer [12] generate multiple hypotheses, which improves accuracy but still faces limitations. For example, ManiPose [3] averages multiple hypotheses, resulting in uncertainty and unreliable predictions.
+
+![mh_3dhp_problem](/images/MH_problem.png)
+
+<p align="center"><em>Figure: Some of the SOTA method [12], given a frame with occlued body parts</em></p>
+
+More advanced approaches like D3DP [1] introduce Joint-wise Reprojection-based Multi-hypothesis Aggregation (JPMA) using diffusion models, achieving strong performance. However, JPMA depends on intrinsic camera parameters for reprojection, making it less practical for real-world applications.
+
+## 1.4. Objective
 To address the problem that mentioned above, this work proposed MHFusionNet, the Multiple Hypotheses Fusion-Based Approach for 3D Human Pose Estimation. The proposed MHFusionNet designed to integrate multiple 3D human pose hypotheses into a final prediction. Unlike prior approaches that rely on averaging (ManiPose[3]), oracle-based selection, or intrinsic camera parameters [1]. By leveraging a learnable fusion network, MHFusionNet is designed to handle pose ambiguity and occlusion more effectively, while remaining practical
 and applicable in real-world scenarios where camera calibration data is unavailable.
+
+## 1.5. Scope of works
+The main contributions are summarized as follows:
+- Implemen a diffusion-based model to generate multiple 3D pose hypotheses from 2D keypoints using a pre-trained model as backbone.
+- Design a fusion network that takes the multi-hypotheses as input to predicts the final 3D human pose.
+- Train and evaluate our MHFusionNet by following standard benchmarks (MPJPE).
+- Perform a comparative analysis of the proposed MHFusionNet against baseline approaches and SOTA technique to assess accuracy and robustness.
+
+# 2. Proposed Method
+An overview of the proposed MHFusionNet is illustrated in Figure below, the architecture consists of two stages: 
+- The Multiple Hypotheses Network (Freezed).
+- The Proposed Multiple Hypotheses Fusion Network.
+
+![mh_intro_1](/images/MH1.png)
+
+<p align="center"><em>Figure: Overview of the proposed MHFusionNet Method</em></p>
+
+In the first stage, we adopt the *D3DP model* as the baseline to generate multiple plausible 3D human pose hypotheses from a 2D input. These diverse hypotheses are then passed to the second stage, the Fusion Network (FN) which is specifically trained to identify and synthesize the most accurate final 3D human pose from the given set of
+the hypotheses. 
+
+The proposed ***MHFusionNet*** leverages a pre-trained multi-hypotheses model in the first stage to generate multiple 3D human pose. In this second stage, the FN was designed based on two strategies Feature Fusion (FF) and Early Fusion (EF) techniques.
+This approach advances upon prior state-of-the-art (SOTA) methods by modeling uncertainty more effectively, rather than relying on simple assumptions like averaging.
+
 
