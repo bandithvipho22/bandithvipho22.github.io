@@ -1,7 +1,7 @@
 ---
 title: "4. Sim-To-Real Reinforcement Learning for Robot Navigation"
 excerpt: "<br/><img src='/images/sim_to_real.png'>"
-collection: portfolio
+collection: portfolio-4
 ---
 
 ![Sim-To-Real Reinforcement Learning](/images/sim_to_real.png)

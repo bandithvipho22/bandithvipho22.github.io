@@ -14,7 +14,7 @@ collection: portfolio-1
     - [1.3. Problem of Statement](#13-Problem-statement)
     - [1.4. Objection](#14-Objective)
     - [1.5. Scope of works](#15-scope-of-works)
-- [II. Methodology](#ii-methodology)
+- [II. Proposed Method](#ii-Proposed-Method)
 - [III. Result and Discussion](#iii-result-and-discussion)
 - [IV. Achievements](#iv-achievements)
 - [V. Our Goals](#v-our-goals)
@@ -127,4 +127,16 @@ $$
 Each hypothesis $\hat{y}_0 \in \mathbb{R}^{J\times 3}$  , where $J$ is the number of joints. Optionally, this process can be refined over $K$ iteration ($K$: number of samplings timestep) using the DDIM
 strategy [15], which improves the accuracy of the generated hypotheses.
 
+## 2.2. Feature Fusion
+Feature Fusion is fusing the individual feature representations from each hypothesis, by taking the 3D input and mapping them into a high-dimensional space to obtain the feature.
 
+![mh_FF](/images/MH_FF.png)
+
+<p align="center"><em>Figure: The overview of Feature Fusion (FF)</em></p>
+
+As shown in Figure above, the Feature Fusion consists of two modules: 
+- Feature Extractor (FE)
+- Regression Head (RH)
+
+The process begins with the multiple 3D human pose as the input passed through the Feature Extractor that converts the raw data from the 3D pose into high dimensional feature. These features encode spatial-temporal
+information of the body joints and the dynamics across frames.
