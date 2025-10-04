@@ -138,5 +138,75 @@ As shown in Figure above, the Feature Fusion consists of two modules:
 - Feature Extractor (FE)
 - Regression Head (RH)
 
-The process begins with the multiple 3D human pose as the input passed through the Feature Extractor that converts the raw data from the 3D pose into high dimensional feature. These features encode spatial-temporal
-information of the body joints and the dynamics across frames.
+The process begins with the multiple 3D human pose as the input passed through the Feature Extractor that converts the raw data from the 3D pose into high dimensional feature. These features encode spatial-temporal information of the body joints and the dynamics across frames.
+
+### 2.2.1. Feature Extractor
+Feature Fusion extracts high-dimensional features representations from each hypothesis independently, then integrates them through fusion mechanism. By motivating from the FusionFormer [3], in the Feature Extractor We adopt PoseFormer [13] as the feature extractor in the main experiments.
+
+Our Feature extractor is built upon a Poseformer-based architecture, which was originally designed to operate on 2D input keypoints in spatial-temporal. In our ***MHFusionNet***, we modified the **Poseformer** [13] to accept 3D input, allowing it to extract high-dimensional feature embeddings from each individual 3D pose hypothesis. The overall procedure of our feature extractor is illustrated in ***Figure Below***.
+
+![mh_FF](/images/MH_FE.png)
+
+<p align="center"><em>Figure: Overview of Feature Extractor (FE)</em></p>
+
+After obtaining the set of multiple 3D human pose from the pre-trained model D3DP model, we have an input tensor $H_i$ of shape [B, F, J, 3], where 3 denotes the ($x, y, z$) coordinates:
+
+$$
+F_{3D} : H_i \in \mathbb{R}^{B \times F \times J\times 3} \tag{3}
+$$
+
+Each input $H_i$ contains $H$ Hypotheses across $F$ frame, yielding an overall set that denotes the estimation results as $P_{3D}$:
+
+$$
+P_{3D} = F_{3D}(I) \in \mathbb{R}^{B \times F \times H \times J \times 3} \tag{4}
+$$
+
+The D3DP model takes an input $I$ (2D observations), $F_{3D}(I)$ denoted the D3DP model's inference yielding $H$ hypotheses of 3D pose across $F$ frames as shown in (Eq. 4). At this point, $P_{3D}$ contains a set of hypotheses 3D poses for each frame across the batch represented by B.
+
+To extract high-dimensional feature embeddings, $P_{3D}$ is passed through the Feature Extractor, which projects each 3D point into latent space of high dimensionality. This can be represented:
+
+$$
+F_{embed} = Embed(P_{3D}) \mathbb{R}^{B \times F \times H \times J \times C_H} \tag{5}
+$$
+
+Where $C_H$ is the number of channels of each keypoint. Subsequently, the feature extractor employs several layers to extract the relationship between keypoint. Each joint of every hypothesis and frame is embedded into this latent space, allowing the model to learn spatial and temporal relationships across the pose sequence.
+
+To embedded features $F_{embed}$ are further processed by the Pose Feature Encoder $E_{pose}$ , which applied a series of attention mechanisms as in Poseformer-based, extracting the relationship between joints, frame, and hypotheses:
+
+$$
+F^0_{pose} = E_{pose}(F_{embed}) \in \mathbb{R}^{B \times F \times H \times J \times C_H} \tag{6}
+$$
+
+Where:
+- $P_{3D}$: Output of the D3DP model across $F$ frames and $H$ hypotheses.
+- $F_{embed}$: High-dimensional embeddings of the 3D input $P_{3D}$.
+- $F_{pose}$: Final feature representation learned by the pose feature encoder.
+
+$F_{pose}$, capture both the spatial structure within each hypothesis and the temporal consistency across frames. They are then passed to the regression head to produce the final refined 3D pose prediction.
+
+### 2.2.2. Regression Head
+To maximize the capacity of our fusion network, we employ a simple 3D pose regression head to map the fused hypotheses features into final 3D human pose predictions. Once we have the encoded feature map $F_{Pose}$ from the pose feature encoder:
+
+$$
+F_{pose} \in \mathbb{R}^{B \times F \times H \times J \times C_H} \tag{7}
+$$
+
+The goal of the regression head is to aggregate information across the $H$ hypotheses and regress to a single final 3D human pose prediction. Before we pass the $F_{pose}$ to the regression head, first we concatenate the feature embeddings across the hypothesis dimension $H$ . This creates a combined feature for each joint across all hypotheses:
+
+$$
+F_{concat} = concat(F_{pose}) \in \mathbb{R}^{B \times F \times J \times (H \times C_{H})} \tag{8}
+$$ 
+
+As we can see in (Eq. 8) above, we concatenated the 𝐹𝑝𝑜𝑠𝑒 across hypotheses on $C_H$ channels. This concatenation allows the model to access information from all hypotheses simultaneously, making it possible to learn inter-hypotheses relationships and select the best parts of each hypothesis.
+
+After obtaining $F_{concat}$ , we pass it to the Regression Head (RH) to produce the final 3D human pose prediction. The regression head (RH) acts as a mapping network that takes the combined feature space and learns to regress it to valid 3D pose:
+
+$$
+\tilde{P}_{3D} = R_{\theta} (F_{concat}) \in \mathbb{R}^{B \times F \times J \times 3} \tag{9}  
+$$
+
+Where $R_{\theta} (.)$ is the regression head implemented with learnable parameters $\theta$ and $\tilde{P}_{3D}$ is the Final 3D human pose prediction, matching the ground truth shape ($B, F, J, 3$). 
+
+To investigate the best way to map from the high-dimensional $F_{concatenate}$ space to the final 3D pose, we implemented and experimented with different network structures for our regression head, including MLP, ResidualFC, and DenseFC. Each approach operates on the input feature of shape (𝐻 × 𝐶). The details of each design below.
+
+### a. Multi-Layer Perceptron (MLP)
