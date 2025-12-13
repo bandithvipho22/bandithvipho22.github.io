@@ -42,6 +42,8 @@ feature fusion (FF) and early fusion (EF) techniques. This approach advances upo
 prior state-of-the-art (SOTA) methods by modeling uncertainty more effectively, rather
 than relying on simple assumptions like averaging.
 
+***Notice***: You explore about my research through here [[View My Report](MHFusionNet.pdf)].
+
 # I. Introduction
 In recent years, artificial intelligence (AI) has become a driving force behind many
 innovations that shape in everyday lives. Among these AI innovations, 3D Human pose
