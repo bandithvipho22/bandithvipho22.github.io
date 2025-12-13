@@ -90,6 +90,7 @@ I am passionate about developing AI-driven solutions that deliver real-world imp
 - Trained a YOLO object detection model on a custom dataset for three ball colors.
 - Quantized the model to TensorRT and deployed it on Jetson AGX Xavier.
 - Enabled the robot to autonomously locate balls and deposit them into silos autonomously.
+
 ---
 
 ### AI Engineering Intern
