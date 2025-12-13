@@ -39,7 +39,7 @@ I am passionate about developing AI-driven solutions that deliver real-world imp
 ### Computer Vision Research Intern
 **National Chung Cheng University**  
 *Chiayi, Taiwan*  
-**Duration**: March 2025 – June 2025  
+**Duration**: 01, March 2025 – 30, June 2025  
 
 **Research Topic**: *Multiple Hypotheses Fusion-Based Approaches for 3D Human Pose Estimation*  
 
