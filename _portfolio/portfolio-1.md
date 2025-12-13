@@ -210,3 +210,10 @@ Where $R_{\theta} (.)$ is the regression head implemented with learnable paramet
 To investigate the best way to map from the high-dimensional $F_{concatenate}$ space to the final 3D pose, we implemented and experimented with different network structures for our regression head, including MLP, ResidualFC, and DenseFC. Each approach operates on the input feature of shape (𝐻 × 𝐶). The details of each design below.
 
 ### a. Multi-Layer Perceptron (MLP)
+MLP is used as a neural network to model the relationship between inputfatures and a continuous output variable. MLP is a feadforward network comprised of a sequence of Linear and activation functions. In this network, we constructed three layers by using Linear module and ReLU activation functions as shown in Figure below.
+
+![mh_mlp](/images/MH_mlp.png)
+
+<p align="center"><em>Figure: MLP Network</em></p>
+
+

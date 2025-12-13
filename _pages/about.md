@@ -1,71 +1,116 @@
 ---
 permalink: /
-title: "About Me"
+title: "ABOUT ME"
 author_profile: true
-redirect_from: 
+redirect_from:
   - /about/
   - /about.html
---- 
+---
 
-I am a recent graduate with a **Bachelor of Engineering in Electrical Engineering** from the **Institute of Technology of Cambodia**, specializing in **Electronics and Automation**. I am deeply passionate about applying AI and embedded technologies to solve real-world problems, especially in the field of assistive technologies and robotics.
+I am passionate about developing AI-driven solutions that deliver real-world impact, with a focus on computer vision and robotics. My core interests include deep learning, human pose estimation, and machine learning, where I specialize in translating cutting-edge research into practical, deployable systems. I am particularly motivated by the potential of intelligent models to improve human-computer interaction and address complex challenges through innovative design and implementation.
 
 ---
 
-## 🔬 Research Interests
+## Research Interests
 
-- Artificial Intelligence (AI) and Deep Learning (DL)  
-- Computer Vision and Human Pose Estimation  
-- AI on Embedded and Edge Devices  
-- Robotics and Intelligent Systems  
-- Human-Computer Interaction for Accessibility  
-
-My goal is to build efficient, scalable, and accessible AI solutions for applications in **healthcare, education, and community services**. I strongly believe in leveraging technology to create inclusive and impactful systems that bridge the gap between humans and machines.
+- Autonomous Mobile Robots and Intelligent Systems
+- Computer Vision and Image Processing
+- 2D/3D Human Pose Estimation from Images and Videos
+- Human-Computer Interaction for Accessibility
+  - Action Recognition and Sign Language Recognition
+  - Video Surveillance
+- AI Deployment on Edge Devices (Flask)
 
 ---
 
-## 🛠️ Project Experiences
+## Work Experiences
 
-### 🇰🇭 Cambodia Sign Language Recognition and Translation  
-**Researcher & Developer**  
-Developing an AI-powered system for recognizing **Khmer Sign Language** and translating it into **text and speech** in real-time.  
-- Current system recognizes **21 gestures** using a deep learning model trained on hand landmarks.  
-- Deployed on a **local web app** using **Python Flask** for real-time inference.  
-- Integrated **Text-to-Speech (TTS)** for accessibility.  
-- Working on expanding the vocabulary and improving recognition accuracy.
+### Robotic Lab Assistant and Part-time Robotic Coach  
+**SekSaa Tech Academy**  
+*Phnom Penh, Cambodia*  
+**Duration**: Present  
 
-### 🇹🇼 3D Human Pose Estimation (MHFusionNet)  
-**Research Intern at National Chung Cheng University, Taiwan**  
-**Duration**: March, 2025 – July, 2025 (4 months)   
-Topic: *"MHFusionNet: Multiple Hypotheses Fusion-Based Approaches for 3D Human Pose Estimation"*  
-- Researched methods to fuse multiple 3D human pose predictions into a **single refined estimation**.  
-- Improved **accuracy and robustness** in 3D pose estimation tasks.  
-- Worked on training and evaluating deep learning models for human posture analysis.
+- Managed inventory and prepared electronic components for the Robotics Lab.  
+- Designed and developed miniature AI projects (utilizing YOLO and OpenCV) and robotic educational projects, including obstacle avoidance vehicles, smart lighting systems, IR remote-controlled robots, and line-tracking robots.  
+- Employed tools and platforms such as Micro:bit MakeCode, MicroPython, Arduino IDE, and Raspberry Pi.
 
-### 🤖 AI Farm Robotics Company – Internship #2  
-**Position**: AI Engineering Intern  
-**Duration**: August, 2024 – November, 2024 (3 months)  
+---
+
+### Computer Vision Research Intern
+**National Chung Cheng University**  
+*Chiayi, Taiwan*  
+**Duration**: March 2025 – June 2025  
+
+**Research Topic**: *Multiple Hypotheses Fusion-Based Approaches for 3D Human Pose Estimation*  
+
+- Employed diffusion-based methods (D3DP) to generate multiple 3D pose hypotheses and designed a fusion network to produce a refined, highly accurate final pose estimation.  
+- Implemented feature fusion and early fusion strategies, achieving improved accuracy and robustness over state-of-the-art methods by effectively modeling uncertainty.  
+- Conducted training and evaluation of deep learning models for human posture analysis.
+
+---
+
+### Research & Development – Cambodian Sign Language Recognition and Translation  
+*Phnom Penh, Cambodia*  
+**Duration**: September 2024 – Present (Ongoing)  
+
+- Developed a real-time Cambodian Sign Language recognition and translation system using deep learning to convert signs into text and synthesized speech.  
+- Collected and preprocessed custom datasets; extracted 2D keypoints from RGB videos using MediaPipe Holistic.  
+- Trained an LSTM-based sequence recognition model on the proprietary Cambodian Sign Language dataset.  
+- Integrated MMS-TTS for natural Cambodian text-to-speech generation.  
+- Deployed the system as a local web application using Python Flask for real-time inference.
+
+**Awards and Achievements:**
+- **Business Model Competition (BMC), Cambodia**, *March 2025* 
+  - Digital Tech Award – Sponsored Trip to Dublin, Ireland  
+  
+- **Unipreneur Competition**, *December 2024*  
+  - Top 6 National Award, Prize of 1,500 USD  
+
+---
+
+### AI Engineering Intern
+**AI Farm Robotics Company** 
+*Phnom Penh, Cambodia*   
+**Duration**: August 2024 – November 2024  
+
 **Project**: *Sim-to-Real Reinforcement Learning for Robot Navigation*  
-- Implemented **reinforcement learning algorithms** to train autonomous robot navigation from random positions to predefined target points in unknown environments.  
-- Used **ROS2 and Gazebo** for simulation and training.  
-- Deployed the trained model onto a **real robot** to validate sim-to-real transfer performance.
 
-### 🤖 AI Farm Robotics Company – Internship #1  
-**Position**: AI Engineering Intern  
-**Duration**: August, 2023 – November, 2023 (3 months)  
+- Implemented reinforcement learning algorithms to enable autonomous navigation from random starting positions to predefined targets in unknown environments.  
+- Utilized ROS2 and Gazebo for simulation-based training.  
+- Deployed trained policies on physical robots to evaluate sim-to-real transfer performance.
+
+---
+
+### Leaded Programming Team
+**ABU Robocon Competition 2024**  
+*Institute of Technology of Cambodia* 
+**Duration**: August 2024 – November 2024 
+
+- Developed a ROS2-based control system for an autonomous ball-collecting robot.
+- Trained a YOLO object detection model on a custom dataset for three ball colors.
+- Quantized the model to TensorRT and deployed it on Jetson AGX Xavier.
+- Enabled the robot to autonomously locate balls and deposit them into silos autonomously.
+---
+
+### AI Engineering Intern
+**AI Farm Robotics Company**  
+*Phnom Penh, Cambodia*  
+**Duration**: August 2023 – November 2023  
+
 **Project**: *Robot Navigation using ROS2 and Nav2 Framework*  
-- Built **Gazebo and RViz environments** for simulation and testing.  
-- Used **SLAM Toolbox** to scan and generate the environment map.  
-- Integrated **Path Planning and Path Tracking** modules for differential drive robot navigation.
+
+- Constructed simulation environments in Gazebo and RViz for testing and visualization.  
+- Applied SLAM Toolbox for environment mapping.  
+- Integrated path planning and tracking modules for differential drive robot navigation.
 
 ---
 
-## 🤝 Opportunities & Collaboration
+## Technical Skills
 
-I am actively seeking:  
-- **Graduate programs (Master's or PhD)** in AI, Computer Vision, or Robotics  
-- **Research collaborations** on AI applications in assistive technology, embedded systems, or AI and Computer Vision  
-- **Open-source contributions** and AI-for-good initiatives  
+- **Programming Languages**: Python, C/C++, ROS2  
+- **Frameworks & Libraries**: TensorFlow/keras, PyTorch, OpenCV, MediaPipe, Flask, ROS2, HuggingFace/Transformer, and Diffusion 
+- **Tools & Platforms**: Arduino IDE, Raspberry Pi, Gazebo, RViz, SLAM Toolbox  
+- **Domains**: Deep Learning, Reinforcement Learning, Computer Vision, Robotics Simulation
+- **Other**: Git/GitHub, SSH, Linux, Flask,terminal, Virtual environments, Anaconda.
 
-I am enthusiastic about learning, collaboration, and building technologies that make a difference.
-
----
+For further details, please visit my [LinkedIn](https://www.linkedin.com/in/bandithvipho22) profile or explore my projects on [GitHub](https://github.com/bandithvipho22), and explore my [Portfolio](https://bandithvipho22.github.io//portfolio/).
