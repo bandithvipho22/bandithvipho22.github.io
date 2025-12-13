@@ -1,7 +1,16 @@
----
+<!-- ---
 title: "MHFusionNet: Multiple Hypotheses Fusion-Based Approach For 3D Human Pose Estimation"
 excerpt: "<br/><img src='/images/MH_Intro.png'>"
 collection: portfolio-1
+--- -->
+
+---
+title: "MHFusionNet: Multiple Hypotheses Fusion-Based Approach For 3D Human Pose Estimation"
+excerpt: "Advanced 3D human pose estimation using multiple hypotheses fusion with deep learning techniques."
+header:
+  teaser: /images/MH_Intro.png
+collection: portfolio
+<!-- github: https://github.com/yourusername/project -->
 ---
 
 ![MHFusionNet](/images/MH_Intro.png)
