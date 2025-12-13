@@ -15,7 +15,7 @@ kramdown:
 mathjax: true
 locale                   : "en-US"
 site_theme               : "default"
-title                    : "Home"
+title                    : "Home/About Me"
 title_separator          : "-"
 name                     : &name "LANG Bandithvipho"
 description              : &description "personal description"
