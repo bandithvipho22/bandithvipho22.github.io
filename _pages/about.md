@@ -115,3 +115,11 @@ I am passionate about developing AI-driven solutions that deliver real-world imp
 - **Other**: Git/GitHub, SSH, Linux, Flask,terminal, Virtual environments, Anaconda.
 
 For further details, please visit my [LinkedIn](https://www.linkedin.com/in/bandithvipho22) profile or explore my projects on [GitHub](https://github.com/bandithvipho22), and explore my [Portfolio](https://bandithvipho22.github.io//portfolio/).
+
+---
+
+## Contact
+
+**Email**: bandithvipho22@gmail.com  
+**Tel**: (+855)(0) 976422790
+
