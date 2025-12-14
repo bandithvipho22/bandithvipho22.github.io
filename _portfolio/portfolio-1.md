@@ -9,15 +9,12 @@ collection: portfolio-1
 # Table of Contents
 - [ABSTRACT](#Abstract)
 - [I. Introduction](#i-introduction)
-    - [1.1. Research Background](#11-Research-Background)
-    - [1.2. Applications for 3D Human Pose Estimation](#12-Applications)
-    - [1.3. Problem of Statement](#13-Problem-statement)
-    - [1.4. Objection](#14-Objective)
-    - [1.5. Scope of works](#15-scope-of-works)
 - [II. Proposed Method](#ii-Proposed-Method)
-- [III. Result and Discussion](#iii-result-and-discussion)
-- [IV. Achievements](#iv-achievements)
-- [V. Our Goals](#v-our-goals)
+- [III. Conclusion and Discussion](#iii-conclusion-and-discussion)
+
+---
+
+***Notice***: For full technical details, architecture design, and experimental results, please refer to the complete report: [[View My Report](/files/MHFusionNet.pdf)].
 
 ---
 
@@ -41,8 +38,6 @@ human pose. Second stage, the fusion network was designed based on two strategie
 feature fusion (FF) and early fusion (EF) techniques. This approach advances upon
 prior state-of-the-art (SOTA) methods by modeling uncertainty more effectively, rather
 than relying on simple assumptions like averaging.
-
-***Notice***: For full technical details, architecture design, and experimental results, please refer to the complete report: [[View My Report](/files/MHFusionNet.pdf)].
 
 # I. Introduction
 In recent years, artificial intelligence (AI) has become a driving force behind many
