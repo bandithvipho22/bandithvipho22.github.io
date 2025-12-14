@@ -42,7 +42,7 @@ feature fusion (FF) and early fusion (EF) techniques. This approach advances upo
 prior state-of-the-art (SOTA) methods by modeling uncertainty more effectively, rather
 than relying on simple assumptions like averaging.
 
-***Notice***: You explore about my research through here [[View My Report](/files/MHFusionNet.pdf)].
+***Notice***: For full technical details, architecture design, and experimental results, please refer to the complete report: [[View My Report](/files/MHFusionNet.pdf)].
 
 # I. Introduction
 In recent years, artificial intelligence (AI) has become a driving force behind many
@@ -76,16 +76,16 @@ Recent work, such as D3DP with JPMA, improves accuracy by aggregating multiple h
 
 More advanced approaches like D3DP [1] introduce Joint-wise Reprojection-based Multi-hypothesis Aggregation (JPMA) using diffusion models, achieving strong performance. However, JPMA depends on intrinsic camera parameters for reprojection, making it less practical for real-world applications.
 
-## 1.4. Objective
+<!-- ## 1.4. Objective
 To address the problem that mentioned above, this work proposed MHFusionNet, the Multiple Hypotheses Fusion-Based Approach for 3D Human Pose Estimation. The proposed MHFusionNet designed to integrate multiple 3D human pose hypotheses into a final prediction. Unlike prior approaches that rely on averaging (ManiPose[3]), oracle-based selection, or intrinsic camera parameters [1]. By leveraging a learnable fusion network, MHFusionNet is designed to handle pose ambiguity and occlusion more effectively, while remaining practical
-and applicable in real-world scenarios where camera calibration data is unavailable.
+and applicable in real-world scenarios where camera calibration data is unavailable. -->
 
-## 1.5. Scope of works
+<!-- ## 1.5. Scope of works
 The main contributions are summarized as follows:
 - Implemen a diffusion-based model to generate multiple 3D pose hypotheses from 2D keypoints using a pre-trained model as backbone.
 - Design a fusion network that takes the multi-hypotheses as input to predicts the final 3D human pose.
 - Train and evaluate our MHFusionNet by following standard benchmarks (MPJPE).
-- Perform a comparative analysis of the proposed MHFusionNet against baseline approaches and SOTA technique to assess accuracy and robustness.
+- Perform a comparative analysis of the proposed MHFusionNet against baseline approaches and SOTA technique to assess accuracy and robustness. -->
 
 # 2. Proposed Method
 An overview of the proposed MHFusionNet is illustrated in Figure below, the architecture consists of two stages: 
@@ -129,7 +129,12 @@ $$
 Each hypothesis $\hat{y}_0 \in \mathbb{R}^{J\times 3}$  , where $J$ is the number of joints. Optionally, this process can be refined over $K$ iteration ($K$: number of samplings timestep) using the DDIM
 strategy [15], which improves the accuracy of the generated hypotheses.
 
-## 2.2. Feature Fusion
+## 2.2. Multi-Hypotheses Fusion Network
+Multi-Hypotheses Fusion Network was
+designed based on two strategies Feature Fusion (FF) and Early Fusion (EF) techniques.
+This approach advances upon prior state-of-the-art (SOTA) methods by modeling
+uncertainty more effectively, rather than relying on simple assumptions like averaging.
+### 2.2.1. Feature Fusion
 Feature Fusion is fusing the individual feature representations from each hypothesis, by taking the 3D input and mapping them into a high-dimensional space to obtain the feature.
 
 ![mh_FF](/images/MH_FF.png)
@@ -137,12 +142,14 @@ Feature Fusion is fusing the individual feature representations from each hypoth
 <p align="center"><em>Figure: The overview of Feature Fusion (FF)</em></p>
 
 As shown in Figure above, the Feature Fusion consists of two modules: 
-- Feature Extractor (FE)
-- Regression Head (RH)
+- Feature Extractor (FE): We modified the Poseformer [13] to accept 3D input, allowing it to extract high-dimensional feature embeddings from each individual 3D pose hypothesis.
 
-The process begins with the multiple 3D human pose as the input passed through the Feature Extractor that converts the raw data from the 3D pose into high dimensional feature. These features encode spatial-temporal information of the body joints and the dynamics across frames.
+![mh_FF](/images/MH_FE.png)
+<p align="center"><em>Figure: Architecture of Feature Extractor</em></p>
 
-### 2.2.1. Feature Extractor
+- Regression Head (RH): the process begins with the multiple 3D human pose as the input passed through the Feature Extractor that converts the raw data from the 3D pose into high dimensional feature. These features encode spatial-temporal information of the body joints and the dynamics across frames.
+
+<!-- ### 2.2.1. Feature Extractor
 Feature Fusion extracts high-dimensional features representations from each hypothesis independently, then integrates them through fusion mechanism. By motivating from the FusionFormer [3], in the Feature Extractor We adopt PoseFormer [13] as the feature extractor in the main experiments.
 
 Our Feature extractor is built upon a Poseformer-based architecture, which was originally designed to operate on 2D input keypoints in spatial-temporal. In our ***MHFusionNet***, we modified the **Poseformer** [13] to accept 3D input, allowing it to extract high-dimensional feature embeddings from each individual 3D pose hypothesis. The overall procedure of our feature extractor is illustrated in ***Figure Below***.
@@ -218,4 +225,28 @@ MLP is used as a neural network to model the relationship between inputfatures a
 
 <p align="center"><em>Figure: MLP Network</em></p>
 
+ -->
 
+### 2.2.2 Early Fusion
+Early Fusion combines the raw hypothesis in the early stage in the network before
+passing to any deep feature fusion, allowing the network to learn dependencies directly
+from the joint coordinates.
+![mh_FF](/images/MH_EF.png)
+
+<p align="center"><em>Figure: The Architecture of Early Fusion (FF)</em></p>
+
+After concatenating each hypothesis on C-channels, then it’s fed into our fusion
+network that implements two distinct architectural approaches: ResidualFC and
+DenseFC networks as the same as we implemented in regression head for Feature
+Fusion.
+
+# 3. Conclusion and Discussion
+In this work, we proposed MHFusionNet, a multi-hypothesis fusion framework
+for 3D human pose estimation that effectively integrates multiple 3D pose hypotheses
+using deep learning. The network was implemented in two architectures: Feature Fusion (FF), which leverages a dedicated feature extractor (Poseformer), and Early Fusion (EF), which performs direct concatenation and regression. Through extensive experiments on the Human3.6M dataset, we demonstrated that both fusion strategies achieve competitive accuracy compared to state-of-the-art methods such as D3DP with JPMA (J-Agg, P-Agg) and averaging-based techniques. While JPMA shows slightly better accuracy, its dependence on camera calibration and intrinsic parameters makes it less practical for real-world deployment.
+
+---
+
+***Notice***: For full technical details, architecture design, and experimental results, please refer to the complete report: [[View My Report](/files/MHFusionNet.pdf)].
+
+---
