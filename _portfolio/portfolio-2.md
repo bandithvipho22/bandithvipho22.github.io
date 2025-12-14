@@ -8,8 +8,6 @@ collection: portfolio-2
 
 # Table of Contents
 - [I. Introduction](#i-introduction)
-- [1.1. Objective](#11-objective)
-- [1.2. Scope of Work](#12-scope-of-work)
 - [II. Methodology](#ii-methodology)
   - [2.1. Data Collection](#21-data-collection)
   - [2.2. Sign Recognition Model](#22-sign-recognition-model)
@@ -20,6 +18,11 @@ collection: portfolio-2
 - [III. Result and Discussion](#iii-result-and-discussion)
 - [IV. Achievements](#iv-achievements)
 - [V. Our Goals](#v-our-goals)
+
+---
+
+***Notice***: For full technical details, architecture design, and experimental results, please refer to the complete report:
+[[View my Report](/files/KSL_Project.pdf)] and my demo video [[Demo videos](https://drive.google.com/drive/folders/13BYBKfAXmTQ-JzGwgc5eopT5qk_auznO?usp=drive_link)].
 
 ---
 
@@ -278,3 +281,9 @@ opportunities.
 - As what we have done above is a proof of concept and are now focused on refining our algorithms, expanding our sign language database, and building user-friendly mobile applications. 
 - This technology has the potential to greatly improve the quality of life and social inclusion for disabled individuals in Cambodia and the region.
 
+---
+
+***Notice***: For full technical details, architecture design, and experimental results, please refer to the complete report:
+[[View my Report](/files/KSL_Project.pdf)] and my demo video [[Demo videos](https://drive.google.com/drive/folders/13BYBKfAXmTQ-JzGwgc5eopT5qk_auznO?usp=drive_link)].
+
+---

@@ -19,6 +19,11 @@ collection: portfolio-3
 
 ---
 
+***Notice***: For full technical details, architecture design, and experimental results, please refer to the complete report:
+[[View my report](/files/Object_Detection_with_YOLO_model.pdf)] and my testing video [[Video Testing Robot on Game fields](https://drive.google.com/drive/folders/1GVAVa5b6EfM1pL5e8ckKp0xuN51rKIBh?usp=drive_link)]
+
+---
+
 # I. Introduction
 The primary objective of this project is to participate in the ABU Robocon Competition 2024 by performing object detection (system) to identify blue and red balls. It will allow a robot to complete challenges autonomously under the rules of the competition.
 
@@ -89,4 +94,12 @@ Key points:
 - **Fast inference time (21.8 ms)** ensures quick and accurate detection, crucial for dynamic gameplay.
 - The system meets real-time requirements, allowing the robot (MR2) to respond promptly.
 
-✅ Overall, the model runs efficiently without causing slowdowns, making it suitable for competition use. Here, the testing video of the Robot in Gamefields. Click Here ([LINK](https://drive.google.com/drive/folders/1GVAVa5b6EfM1pL5e8ckKp0xuN51rKIBh?usp=drive_link)).
+✅ Overall, the model runs efficiently without causing slowdowns, making it suitable for competition use. 
+
+---
+
+***Notice***: For full technical details, architecture design, and experimental results, please refer to the complete report:
+[[View my report](/files/Object_Detection_with_YOLO_model.pdf)] and my testing video [[Video Testing Robot on Game fields](https://drive.google.com/drive/folders/1GVAVa5b6EfM1pL5e8ckKp0xuN51rKIBh?usp=drive_link)]
+
+
+---

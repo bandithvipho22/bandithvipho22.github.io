@@ -8,6 +8,11 @@ collection: portfolio-4
 
 ---
 
+***Notice***: For full technical details, architecture design, and experimental results, please refer to the complete report:
+[[View my Report](/files/RL_Report_VisionAI.pdf)] and my demo video [[Demo videos](https://drive.google.com/file/d/1BWPV1hx6teLYRASBmnPxtR0jjzokFLBu/view?usp=sharing)].
+
+---
+
 # I. Introduction
 
 ## 1.1. What is Reinforcement Learning?
@@ -505,16 +510,16 @@ On the external computer, the Reinforcement Learning (RL) node was executed. Thi
 This architecture enabled the Alogobot to successfully navigate through predefined waypoints in a real-world environment, while maintaining a clear separation between onboard sensing/control and external RL inference.
 
 ### 3.2.2. Real Robot deployment
-After testing in both simulation and the real world, we found that the RL model reached 6 points,
-indicating potential for effective navigation, even though it did not complete the entire path.
+<!-- After testing in both simulation and the real world, we found that the RL model reached 6 points,
+indicating potential for effective navigation, even though it did not complete the entire path. -->
 
-![RL demo](/images/rl_demo.png)
+<!-- ![RL demo](/images/rl_demo.png) -->
 
-<p align="center"><em>Figure: Implement RL model with Real Robot Algobot</em></p>
+<!-- <p align="center"><em>Figure: Implement RL model with Real Robot Algobot</em></p> -->
 
 In the table below, we can see in table above the model performance in simulation better then Real-world even we change the path for it, but in Real-world experiment can achieve only a half-path, the result in real-world seem so bad due to variation of environment, tolerance of electronic component, computational resource and sensor limitation.
 
-***Noted***: Click the Link here for my report documents and you can watch the video demo of both simulation and real robot. ([HERE](https://drive.google.com/drive/folders/1Xx778Jn0rlqk1LbfeiU1i2Y9yM70CALA?usp=drive_link))
+<!-- ***Noted***: Click the Link here for my report documents and you can watch the video demo of both simulation and real robot. ([HERE](https://drive.google.com/drive/folders/1Xx778Jn0rlqk1LbfeiU1i2Y9yM70CALA?usp=drive_link)) -->
 
 
 <h2 align="center">Simulation vs Real-world Results</h2>
@@ -584,3 +589,10 @@ dressed for better real-world performance.
 ## Personal Insight:
 This project lays a strong foundation for future development, with significant potential for autonomous navigation in dynamic, real-world environments. By addressing the challenges and
 refining the approach, the system can be made more robust and reliable for real-world applications.
+
+---
+
+***Notice***: For full technical details, architecture design, and experimental results, please refer to the complete report:
+[[View my Report](/files/RL_Report_VisionAI.pdf)] and my demo video [[Demo videos](https://drive.google.com/file/d/1BWPV1hx6teLYRASBmnPxtR0jjzokFLBu/view?usp=sharing)].
+
+---

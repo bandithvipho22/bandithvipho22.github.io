@@ -82,6 +82,8 @@ The main contributions are summarized as follows:
 - Train and evaluate our MHFusionNet by following standard benchmarks (MPJPE).
 - Perform a comparative analysis of the proposed MHFusionNet against baseline approaches and SOTA technique to assess accuracy and robustness. -->
 
+---
+
 # 2. Proposed Method
 An overview of the proposed MHFusionNet is illustrated in Figure below, the architecture consists of two stages: 
 - The Multiple Hypotheses Network (Freezed).
