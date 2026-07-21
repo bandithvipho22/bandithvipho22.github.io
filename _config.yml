@@ -15,10 +15,10 @@ kramdown:
 mathjax: true
 locale                   : "en-US"
 site_theme               : "default"
-title                    : "Home/About Me"
+title                    : "LANG Bandithvipho"
 title_separator          : "-"
 name                     : &name "LANG Bandithvipho"
-description              : &description "personal description"
+description              : &description "AI Researcher | Computer Vision | Robotics | Portfolio & Projects"
 url                      : https://bandithvipho22.github.io/ # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io" or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "bandithvipho22/bandithvipho22.github.io"

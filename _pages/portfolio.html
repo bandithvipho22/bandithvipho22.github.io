@@ -7,8 +7,84 @@ author_profile: true
 
 {% include base_path %}
 
+<p style="font-size:1.1em; color: var(--global-text-color-light); margin-bottom:1.5em;">
+  A collection of my research projects and engineering work in AI, Computer Vision, and Robotics.
+</p>
+
+<div class="portfolio-filter" id="portfolio-filter">
+  <button class="filter-btn active" data-filter="all">All Projects</button>
+  <button class="filter-btn" data-filter="computer-vision">Computer Vision</button>
+  <button class="filter-btn" data-filter="robotics">Robotics</button>
+  <button class="filter-btn" data-filter="deep-learning">Deep Learning</button>
+  <button class="filter-btn" data-filter="simulation">Simulation</button>
+  <button class="filter-btn" data-filter="edge-ai">Edge AI</button>
+</div>
+
+<div class="portfolio-grid" id="portfolio-grid">
 
 {% for post in site.portfolio %}
-  {% include archive-single.html %}
+  {% unless post.url contains '.html' or post.url contains '.png' %}
+    {% assign img_src = nil %}
+    {% if post.excerpt contains 'img src=' %}
+      {% assign excerpt_parts = post.excerpt | split: 'img src="' %}
+      {% assign after_src = excerpt_parts[1] | split: '"' %}
+      {% assign img_src = after_src[0] %}
+    {% endif %}
+
+    {% if img_src and img_src != '' %}
+      {% unless img_src contains '://' %}
+        {% assign img_src = img_src | prepend: '/' %}
+      {% endunless %}
+    {% endif %}
+
+    <div class="portfolio-card" data-categories="{{ post.tags | join: ',' }}">
+      {% if img_src %}
+        <img class="portfolio-card-img" src="{{ img_src }}" alt="{{ post.title }}" loading="lazy">
+      {% endif %}
+      <div class="portfolio-card-body">
+        <h3><a href="{{ base_path }}{{ post.url }}">{{ post.title }}</a></h3>
+        {% if post.tags %}
+        <div class="portfolio-card-tags">
+          {% for tag in post.tags %}
+          <span class="portfolio-card-tag">{{ tag }}</span>
+          {% endfor %}
+        </div>
+        {% endif %}
+        {% if post.summary %}
+        <p class="portfolio-card-excerpt">{{ post.summary }}</p>
+        {% endif %}
+        <p class="portfolio-card-link"><a href="{{ base_path }}{{ post.url }}">Read More <i class="fas fa-arrow-right"></i></a></p>
+      </div>
+    </div>
+  {% endunless %}
 {% endfor %}
 
+</div>
+
+<script>
+(function() {
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const cards = document.querySelectorAll('.portfolio-card');
+
+  filterBtns.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      filterBtns.forEach(function(b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      var filter = btn.getAttribute('data-filter');
+
+      cards.forEach(function(card) {
+        if (filter === 'all') {
+          card.style.display = '';
+        } else {
+          var cats = card.getAttribute('data-categories') || '';
+          if (cats.indexOf(filter) !== -1) {
+            card.style.display = '';
+          } else {
+            card.style.display = 'none';
+          }
+        }
+      });
+    });
+  });
+})();
+</script>

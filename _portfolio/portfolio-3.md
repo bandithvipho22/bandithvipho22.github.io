@@ -2,7 +2,14 @@
 title: "Object Detection using YOLO Model integrated with ROS2 for Autonomous Robot"
 excerpt: "<br/><img src='/images/abu_object_detection.png'>"
 collection: portfolio-3
+tags:
+  - computer-vision
+  - robotics
+  - edge-ai
+summary: "YOLOv8 object detection quantized to TensorRT and deployed on Jetson AGX Xavier for autonomous ball-collecting robot. ABU Robocon Competition 2024."
 ---
+
+{% include portfolio-meta.html %}
 
 ![Object Detection ROS2](/images/abu_object_detection.png)
 

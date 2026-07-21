@@ -2,7 +2,15 @@
 title: "MHFusionNet: Multiple Hypotheses Fusion-Based Approach For 3D Human Pose Estimation"
 excerpt: "<br/><img src='/images/MH_Intro.png'>"
 collection: portfolio-1
+tags:
+  - computer-vision
+  - deep-learning
+  - 3d-pose-estimation
+  - diffusion-models
+summary: "Diffusion-based multi-hypothesis fusion network for accurate 3D human pose estimation. Research internship at National Chung Cheng University, Taiwan."
 ---
+
+{% include portfolio-meta.html %}
 
 ![MHFusionNet](/images/MH_Intro.png)
 

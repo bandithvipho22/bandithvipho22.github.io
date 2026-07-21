@@ -1,0 +1,19 @@
+{% if page.url contains '/portfolio/' %}
+<div class="portfolio-project-meta">
+  <a class="portfolio-back-link" href="{{ '/portfolio/' | prepend: base_path }}">
+    <i class="fas fa-arrow-left"></i> Back to Portfolio
+  </a>
+
+  {% if page.tags %}
+  <div class="portfolio-project-tags">
+    {% for tag in page.tags %}
+    <span class="portfolio-project-tag">{{ tag }}</span>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  {% if page.summary %}
+  <p class="portfolio-project-summary">{{ page.summary }}</p>
+  {% endif %}
+</div>
+{% endif %}

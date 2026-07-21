@@ -1,8 +1,15 @@
 ---
 title: "Motion Planning for Mecanum Wheel Robot"
 excerpt: "<br/><img src='/images/Motion_Planing.png'>"
-collection: portfolio-4
+collection: portfolio-5
+tags:
+  - robotics
+  - simulation
+  - control-systems
+summary: "Non-linear Model Predictive Control (NMPC) with point stabilization for mecanum wheel robots. Python simulation with N-predict horizon = 30."
 ---
+
+{% include portfolio-meta.html %}
 
 ![Motion Planning](/images/Motion_Planing.png)
 

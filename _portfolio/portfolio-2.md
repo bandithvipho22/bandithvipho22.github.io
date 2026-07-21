@@ -2,7 +2,14 @@
 title: "Cambodia Sign Language Recognition and Translation Text-To-Speech"
 excerpt: "<br/><img src='/images/ksl_proj.png'>"
 collection: portfolio-2
+tags:
+  - computer-vision
+  - deep-learning
+  - accessibility
+summary: "Real-time Cambodian Sign Language recognition using LSTM + MediaPipe Holistic with Khmer TTS. Award-winning project (Digital Tech Award, Top 6 National Unipreneur)."
 ---
+
+{% include portfolio-meta.html %}
 
 ![Sign Language](/images/ksl_proj_t2.png)
 

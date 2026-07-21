@@ -2,7 +2,15 @@
 title: "Sim-To-Real Reinforcement Learning for Robot Navigation"
 excerpt: "<br/><img src='/images/sim_to_real.png'>"
 collection: portfolio-4
+tags:
+  - robotics
+  - deep-learning
+  - simulation
+  - ros2
+summary: "Soft Actor-Critic (SAC) reinforcement learning for autonomous robot navigation with sim-to-real transfer. ROS2 + Gazebo simulation deployed on physical Algobot."
 ---
+
+{% include portfolio-meta.html %}
 
 ![Sim-To-Real Reinforcement Learning](/images/sim_to_real.png)
 

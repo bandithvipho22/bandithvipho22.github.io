@@ -1,0 +1,481 @@
+/* ==========================================================================
+   CUSTOM PORTFOLIO & HOMEPAGE STYLING
+   ========================================================================== */
+
+/* ---- Homepage Hero Section ---- */
+.home-hero {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  color: #fff;
+  padding: 3em 2em;
+  border-radius: 12px;
+  margin-bottom: 2.5em;
+  text-align: center;
+}
+
+.home-hero h1 {
+  font-size: 2.4em;
+  margin-bottom: 0.3em;
+  color: #fff;
+}
+
+.home-hero .hero-subtitle {
+  font-size: 1.2em;
+  opacity: 0.9;
+  font-weight: 300;
+  margin-bottom: 1.2em;
+}
+
+.home-hero .hero-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.2em;
+  flex-wrap: wrap;
+}
+
+.home-hero .hero-links a {
+  color: #fff;
+  background: rgba(255,255,255,0.12);
+  padding: 0.55em 1.4em;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 0.95em;
+  transition: all 0.25s ease;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.home-hero .hero-links a:hover {
+  background: rgba(255,255,255,0.25);
+  transform: translateY(-2px);
+}
+
+/* ---- Section Headers ---- */
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 2em 0 1em;
+}
+
+.section-header h2 {
+  border-bottom: none !important;
+  margin: 0;
+  padding: 0;
+}
+
+.section-divider {
+  border: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--global-link-color) 0%, var(--global-border-color) 100%);
+  margin: 0.5em 0 1.5em;
+}
+
+/* ---- Research Interest Tags ---- */
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 1em 0;
+}
+
+.skill-tag {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.9em;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.skill-tag.cv    { background: #e3f2fd; color: #1565c0; }
+.skill-tag.robot { background: #e8f5e9; color: #2e7d32; }
+.skill-tag.dl    { background: #fce4ec; color: #c62828; }
+.skill-tag.hci   { background: #fff3e0; color: #e65100; }
+.skill-tag.ai    { background: #f3e5f5; color: #7b1fa2; }
+.skill-tag.edge  { background: #e0f7fa; color: #00695c; }
+
+/* ---- Work Experience Cards ---- */
+.exp-card {
+  background: var(--global-bg-color);
+  border: 1px solid var(--global-border-color);
+  border-left: 4px solid var(--global-link-color);
+  border-radius: 8px;
+  padding: 1.2em 1.5em;
+  margin-bottom: 1em;
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.exp-card:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  transform: translateX(3px);
+}
+
+.exp-card h3 {
+  margin: 0 0 0.2em;
+  font-size: 1.1em;
+}
+
+.exp-card .exp-meta {
+  font-size: 0.88em;
+  color: var(--global-text-color-light);
+  margin-bottom: 0.6em;
+}
+
+.exp-card .exp-meta strong {
+  color: var(--global-link-color);
+}
+
+.exp-card ul {
+  margin: 0.4em 0 0;
+  padding-left: 1.3em;
+}
+
+.exp-card ul li {
+  font-size: 0.92em;
+  margin-bottom: 3px;
+}
+
+/* ---- Skills Grid ---- */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1em;
+  margin: 1em 0;
+}
+
+.skill-category {
+  background: var(--global-bg-color);
+  border: 1px solid var(--global-border-color);
+  border-radius: 8px;
+  padding: 1em 1.2em;
+}
+
+.skill-category h4 {
+  margin: 0 0 0.5em;
+  font-size: 0.95em;
+  color: var(--global-link-color);
+}
+
+.skill-category p {
+  font-size: 0.88em;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* ---- Portfolio Filter Bar ---- */
+.portfolio-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 2em;
+}
+
+.filter-btn {
+  padding: 6px 16px;
+  border-radius: 20px;
+  border: 1px solid var(--global-border-color);
+  background: var(--global-bg-color);
+  color: var(--global-text-color);
+  cursor: pointer;
+  font-size: 0.85em;
+  transition: all 0.2s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background: var(--global-link-color);
+  color: #fff;
+  border-color: var(--global-link-color);
+}
+
+/* ---- Portfolio Card Grid ---- */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5em;
+  margin-top: 1em;
+}
+
+.portfolio-card {
+  background: var(--global-bg-color);
+  border: 1px solid var(--global-border-color);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.portfolio-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+}
+
+.portfolio-card-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  background: var(--global-code-background-color);
+}
+
+.portfolio-card-body {
+  padding: 1em 1.2em;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.portfolio-card-body h3 {
+  margin: 0 0 0.5em;
+  font-size: 1.05em;
+  line-height: 1.3;
+}
+
+.portfolio-card-body h3 a {
+  color: var(--global-text-color);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.portfolio-card-body h3 a:hover {
+  color: var(--global-link-color);
+}
+
+.portfolio-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 0.6em;
+}
+
+.portfolio-card-tag {
+  font-size: 0.72em;
+  padding: 3px 10px;
+  border-radius: 12px;
+  background: var(--global-code-background-color);
+  color: var(--global-text-color-light);
+  border: 1px solid var(--global-border-color);
+  white-space: nowrap;
+}
+
+.portfolio-card-excerpt {
+  font-size: 0.85em;
+  color: var(--global-text-color-light);
+  line-height: 1.5;
+  flex: 1;
+}
+
+.portfolio-card-link {
+  margin-top: 0.8em;
+  font-size: 0.88em;
+}
+
+.portfolio-card-link a {
+  color: var(--global-link-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.portfolio-card-link a:hover {
+  text-decoration: underline;
+}
+
+/* ---- Featured Projects on Homepage ---- */
+.featured-projects {
+  margin: 2em 0;
+}
+
+.featured-projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.2em;
+}
+
+.featured-project-mini {
+  background: var(--global-bg-color);
+  border: 1px solid var(--global-border-color);
+  border-radius: 8px;
+  padding: 1em;
+  transition: box-shadow 0.2s;
+}
+
+.featured-project-mini:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+.featured-project-mini h4 {
+  margin: 0 0 0.3em;
+  font-size: 0.95em;
+}
+
+.featured-project-mini p {
+  font-size: 0.83em;
+  color: var(--global-text-color-light);
+  margin: 0;
+}
+
+.featured-project-mini a {
+  color: var(--global-text-color);
+  text-decoration: none;
+}
+
+.featured-project-mini a:hover h4 {
+  color: var(--global-link-color);
+}
+
+/* ---- Contact Footer on Homepage ---- */
+.contact-mini {
+  background: var(--global-bg-color);
+  border: 1px solid var(--global-border-color);
+  border-radius: 8px;
+  padding: 1.2em 1.5em;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5em;
+  align-items: center;
+  margin-top: 2em;
+}
+
+.contact-mini a {
+  color: var(--global-link-color);
+  text-decoration: none;
+}
+
+.contact-mini a:hover {
+  text-decoration: underline;
+}
+
+/* ---- Dark Mode Overrides ---- */
+html[data-theme="dark"] .home-hero {
+  background: linear-gradient(135deg, #0d1117 0%, #161b22 50%, #1a2332 100%);
+}
+
+html[data-theme="dark"] .skill-tag.cv    { background: rgba(21, 101, 192, 0.2); color: #64b5f6; }
+html[data-theme="dark"] .skill-tag.robot { background: rgba(46, 125, 50, 0.2); color: #81c784; }
+html[data-theme="dark"] .skill-tag.dl    { background: rgba(198, 40, 40, 0.2); color: #ef9a9a; }
+html[data-theme="dark"] .skill-tag.hci   { background: rgba(230, 81, 0, 0.2); color: #ffb74d; }
+html[data-theme="dark"] .skill-tag.ai    { background: rgba(123, 31, 162, 0.2); color: #ce93d8; }
+html[data-theme="dark"] .skill-tag.edge  { background: rgba(0, 105, 92, 0.2); color: #80cbc4; }
+
+html[data-theme="dark"] .filter-btn:hover,
+html[data-theme="dark"] .filter-btn.active {
+  background: var(--global-link-color);
+  color: #1a1a1a;
+}
+
+/* ---- Responsive Adjustments ---- */
+@media (max-width: 768px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .featured-projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-hero {
+    padding: 2em 1.2em;
+  }
+
+  .home-hero h1 {
+    font-size: 1.8em;
+  }
+}
+
+/* ---- Portfolio Detail Pages ---- */
+
+.portfolio-project-meta {
+  background: var(--global-bg-color);
+  border: 1px solid var(--global-border-color);
+  border-radius: 10px;
+  padding: 1.2em 1.5em;
+  margin-bottom: 2em;
+}
+
+.portfolio-back-link {
+  display: inline-block;
+  margin-bottom: 0.8em;
+  color: var(--global-link-color);
+  text-decoration: none;
+  font-size: 0.9em;
+  font-weight: 500;
+}
+
+.portfolio-back-link:hover {
+  text-decoration: underline;
+}
+
+.portfolio-project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 0.6em;
+}
+
+.portfolio-project-tag {
+  font-size: 0.75em;
+  padding: 4px 12px;
+  border-radius: 12px;
+  background: var(--global-link-color);
+  color: #fff;
+  white-space: nowrap;
+}
+
+.portfolio-project-summary {
+  font-size: 0.92em;
+  color: var(--global-text-color-light);
+  margin: 0.40m 0 0;
+  line-height: 1.5;
+}
+
+/* Responsive images in portfolio pages */
+.page__content img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive tables in portfolio pages */
+.page__content table {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 1em 0;
+}
+
+.page__content table th,
+.page__content table td {
+  white-space: nowrap;
+  min-width: 80px;
+}
+
+/* Responsive code blocks */
+.page__content div.highlight,
+.page__content pre,
+.page__content code {
+  max-width: 100%;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* Figure captions centered styling */
+.page__content p[align="center"] {
+  text-align: center;
+}
+
+.page__content p[align="center"] em {
+  font-size: 0.85em;
+  color: var(--global-text-color-light);
+}
+
+/* Dark mode overrides for portfolio detail */
+html[data-theme="dark"] .portfolio-project-tag {
+  background: var(--global-link-color);
+  color: #1a1a1a;
+}
