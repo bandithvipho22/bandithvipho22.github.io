@@ -15,38 +15,30 @@
 /* ---- Homepage Intro Bar ---- */
 .page-intro {
   text-align: center;
-  padding: 1em 1.5em;
   margin-bottom: 1.5em;
-  border: 1px solid var(--global-border-color);
-  border-radius: 6px;
-  background: var(--global-bg-color);
 }
 
 .page-intro p {
   font-size: 1.05em;
   color: var(--global-text-color-light);
-  margin: 0 0 0.6em;
+  margin: 0 0 0.4em;
 }
 
 .intro-links {
   display: flex;
   justify-content: center;
-  gap: 0.6em;
+  gap: 1em;
   flex-wrap: wrap;
 }
 
 .intro-links a {
-  font-size: 0.88em;
-  padding: 4px 14px;
-  border: 1px solid var(--global-border-color);
-  border-radius: 4px;
-  color: var(--global-text-color);
+  font-size: 0.9em;
+  color: var(--global-link-color);
   text-decoration: none;
 }
 
 .intro-links a:hover {
-  border-color: var(--global-link-color);
-  color: var(--global-link-color);
+  text-decoration: underline;
 }
 
 /* ---- Research Interests Grid ---- */
@@ -58,55 +50,28 @@
 }
 
 .research-column {
-  background: var(--global-bg-color);
-  border: 1px solid var(--global-border-color);
-  border-top: 3px solid var(--global-link-color);
-  border-radius: 6px;
-  padding: 1.2em 1.4em;
+  padding: 1em 1.4em;
 }
 
 .research-column h3 {
   font-size: 1em;
   font-weight: 600;
-  margin: 0 0 0.8em;
+  margin: 0 0 0.6em;
   color: var(--global-text-color);
-  letter-spacing: 0.02em;
+  padding-bottom: 0.4em;
+  border-bottom: 1px solid var(--global-border-color);
 }
 
 .research-column ul {
   margin: 0;
-  padding-left: 0;
-  list-style: none;
+  padding-left: 1.3em;
 }
 
 .research-column ul li {
-  font-size: 0.88em;
-  line-height: 1.8;
+  font-size: 0.9em;
+  line-height: 1.7;
   color: var(--global-text-color);
-  padding: 2px 0;
-  border-bottom: 1px solid var(--global-border-color);
-  opacity: 0.7;
-  transition: padding-left 0.15s ease, opacity 0.15s ease;
-}
-
-.research-column ul li:last-child {
-  border-bottom: none;
-}
-
-.research-column ul li:hover {
-  padding-left: 4px;
-  color: var(--global-link-color);
-  opacity: 1;
-}
-
-.research-column ul li::before {
-  content: "\203A";
-  color: var(--global-link-color);
-  font-weight: bold;
-  display: inline-block;
-  width: 1em;
-  font-size: 1.1em;
-  line-height: 0;
+  margin-bottom: 2px;
 }
 
 @media (max-width: 768px) {
