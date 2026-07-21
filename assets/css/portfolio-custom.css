@@ -2,76 +2,107 @@
    CUSTOM PORTFOLIO & HOMEPAGE STYLING
    ========================================================================== */
 
-/* ---- Research Interests Grid ---- */
-
-/* ---- About Me text on homepage ---- */
-.about-me-text {
-  font-size: 0.95em;
-  line-height: 1.6;
-  color: var(--global-text-color);
-  margin: 1.5em 0;
-}
-
-/* ---- Homepage Intro Bar ---- */
-.page-intro {
-  text-align: center;
+/* ---- Homepage Header ---- */
+.hp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1em;
+  padding-bottom: 1.5em;
   margin-bottom: 1.5em;
+  border-bottom: 1px solid var(--global-border-color);
 }
 
-.page-intro p {
+.hp-subtitle {
   font-size: 1.05em;
   color: var(--global-text-color-light);
-  margin: 0 0 0.4em;
+  margin: 0;
 }
 
-.intro-links {
+.hp-header-right {
   display: flex;
-  justify-content: center;
   gap: 1em;
   flex-wrap: wrap;
 }
 
-.intro-links a {
+.hp-header-right a {
   font-size: 0.9em;
-  color: var(--global-link-color);
+  color: var(--global-text-color);
   text-decoration: none;
 }
 
-.intro-links a:hover {
-  text-decoration: underline;
+.hp-header-right a:hover {
+  color: var(--global-link-color);
+}
+
+/* ---- About Me block ---- */
+.hp-about {
+  margin-bottom: 2em;
+  padding-left: 1em;
+  border-left: 2px solid var(--global-border-color);
+}
+
+.hp-about h4 {
+  font-size: 0.9em;
+  font-weight: 600;
+  color: var(--global-text-color-light);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0 0 0.5em;
+}
+
+.hp-about p {
+  font-size: 0.95em;
+  line-height: 1.6;
+  margin: 0;
+  color: var(--global-text-color);
+}
+
+/* ---- Section Headers ---- */
+.section-header {
+  margin: 2.2em 0 0.6em;
+}
+
+.section-header h2 {
+  border-bottom: none !important;
+  margin: 0;
+  padding: 0;
+  font-size: 1.2em;
+  font-weight: 600;
 }
 
 /* ---- Research Interests Grid ---- */
 .research-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1.5em;
-  margin: 1em 0;
+  gap: 1.2em;
+  margin: 0.8em 0;
 }
 
 .research-column {
-  padding: 1em 1.4em;
+  background: var(--global-code-background-color);
+  border: 1px solid var(--global-border-color);
+  padding: 1.2em 1.4em;
 }
 
 .research-column h3 {
-  font-size: 1em;
+  font-size: 0.95em;
   font-weight: 600;
   margin: 0 0 0.6em;
-  color: var(--global-text-color);
-  padding-bottom: 0.4em;
-  border-bottom: 1px solid var(--global-border-color);
+  padding-bottom: 0.5em;
+  border-bottom: 2px solid var(--global-border-color);
 }
 
 .research-column ul {
   margin: 0;
-  padding-left: 1.3em;
+  padding-left: 1.2em;
 }
 
 .research-column ul li {
-  font-size: 0.9em;
-  line-height: 1.7;
-  color: var(--global-text-color);
-  margin-bottom: 2px;
+  font-size: 0.88em;
+  line-height: 1.75;
+  margin-bottom: 1px;
 }
 
 @media (max-width: 768px) {
@@ -80,85 +111,154 @@
   }
 }
 
-/* ---- Section Headers ---- */
-.section-header {
-  margin: 2em 0 0.8em;
-}
-
-.section-header h2 {
-  border-bottom: none !important;
-  margin: 0;
-  padding: 0;
-  font-size: 1.3em;
-}
-
-.section-divider {
-  border: 0;
-  height: 1px;
-  background: var(--global-border-color);
-  margin: 0 0 1.5em;
-}
-
-/* ---- Work Experience Cards ---- */
+/* ---- Work Experience / Extra-curriculum (Timeline style) ---- */
 .exp-card {
-  background: var(--global-bg-color);
-  border: 1px solid var(--global-border-color);
-  border-radius: 6px;
-  padding: 1.2em 1.4em;
-  margin-bottom: 0.8em;
+  display: flex;
+  gap: 1em;
+  padding-bottom: 1.2em;
+  margin-bottom: 1em;
+  border-bottom: 1px solid var(--global-border-color);
 }
 
-.exp-card h3 {
-  margin: 0 0 0.2em;
-  font-size: 1.05em;
+.exp-card:last-child {
+  border-bottom: none;
 }
 
-.exp-card .exp-meta {
-  font-size: 0.85em;
+.exp-dot {
+  flex-shrink: 0;
+  width: 8px;
+  height: 8px;
+  margin-top: 0.45em;
+  border-radius: 50%;
+  background: var(--global-border-color);
+}
+
+.exp-content {
+  flex: 1;
+}
+
+.exp-content h3 {
+  margin: 0 0 0.15em;
+  font-size: 1em;
+}
+
+.exp-content .exp-meta {
+  font-size: 0.84em;
   color: var(--global-text-color-light);
-  margin-bottom: 0.5em;
+  margin-bottom: 0.3em;
 }
 
-.exp-card .exp-meta strong {
+.exp-content .exp-meta strong {
   color: var(--global-text-color);
 }
 
-.exp-card ul {
-  margin: 0.3em 0 0;
-  padding-left: 1.3em;
+.exp-content .exp-desc {
+  font-style: italic;
+  font-size: 0.88em;
+  color: var(--global-text-color-light);
+  margin: 0 0 0.4em;
 }
 
-.exp-card ul li {
-  font-size: 0.9em;
+.exp-content ul {
+  margin: 0.2em 0 0;
+  padding-left: 1.2em;
+}
+
+.exp-content ul li {
+  font-size: 0.88em;
   margin-bottom: 2px;
+  color: var(--global-text-color);
+}
+
+.exp-content .exp-award {
+  margin: 0.4em 0 0;
+  font-size: 0.84em;
+  color: var(--global-text-color);
 }
 
 /* ---- Skills Grid ---- */
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 0.8em;
-  margin: 1em 0;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 0.7em;
+  margin: 0.8em 0;
 }
 
 .skill-category {
-  background: var(--global-bg-color);
+  background: var(--global-code-background-color);
   border: 1px solid var(--global-border-color);
-  border-radius: 6px;
-  padding: 1em 1.2em;
+  padding: 0.9em 1.1em;
 }
 
 .skill-category h4 {
-  margin: 0 0 0.4em;
-  font-size: 0.9em;
-  color: var(--global-text-color);
+  margin: 0 0 0.3em;
+  font-size: 0.85em;
+  font-weight: 600;
 }
 
 .skill-category p {
-  font-size: 0.85em;
+  font-size: 0.82em;
   margin: 0;
   line-height: 1.5;
   color: var(--global-text-color-light);
+}
+
+/* ---- Featured Projects Grid ---- */
+.featured-projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 0.8em;
+  margin: 0.8em 0;
+}
+
+.featured-project-mini {
+  display: block;
+  border: 1px solid var(--global-border-color);
+  padding: 1em 1.1em;
+  text-decoration: none;
+  color: inherit;
+}
+
+.featured-project-mini:hover {
+  border-color: var(--global-link-color);
+}
+
+.featured-project-mini h4 {
+  margin: 0 0 0.2em;
+  font-size: 0.88em;
+  font-weight: 600;
+  color: var(--global-text-color);
+}
+
+.featured-project-mini:hover h4 {
+  color: var(--global-link-color);
+}
+
+.featured-project-mini p {
+  font-size: 0.8em;
+  color: var(--global-text-color-light);
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* ---- Contact ---- */
+.hp-contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5em;
+  margin-top: 2em;
+  padding-top: 1.2em;
+  border-top: 1px solid var(--global-border-color);
+  font-size: 0.88em;
+}
+
+.hp-contact a {
+  color: var(--global-link-color);
+  text-decoration: none;
+}
+
+.hp-contact a:hover {
+  text-decoration: underline;
 }
 
 /* ---- Portfolio Filter Bar ---- */
@@ -197,7 +297,6 @@
 .portfolio-card {
   background: var(--global-bg-color);
   border: 1px solid var(--global-border-color);
-  border-radius: 6px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -273,72 +372,10 @@
   text-decoration: underline;
 }
 
-/* ---- Featured Projects on Homepage ---- */
-.featured-projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 1em;
-}
-
-.featured-project-mini {
-  background: var(--global-bg-color);
-  border: 1px solid var(--global-border-color);
-  border-radius: 6px;
-  padding: 1em;
-}
-
-.featured-project-mini:hover {
-  border-color: var(--global-link-color);
-}
-
-.featured-project-mini h4 {
-  margin: 0 0 0.2em;
-  font-size: 0.9em;
-}
-
-.featured-project-mini p {
-  font-size: 0.8em;
-  color: var(--global-text-color-light);
-  margin: 0;
-}
-
-.featured-project-mini a {
-  color: var(--global-text-color);
-  text-decoration: none;
-}
-
-.featured-project-mini a:hover h4 {
-  color: var(--global-link-color);
-}
-
-/* ---- Contact Footer on Homepage ---- */
-.contact-mini {
-  background: var(--global-bg-color);
-  border: 1px solid var(--global-border-color);
-  border-radius: 6px;
-  padding: 1em 1.4em;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5em;
-  margin-top: 2em;
-  font-size: 0.9em;
-}
-
-.contact-mini a {
-  color: var(--global-link-color);
-  text-decoration: none;
-}
-
-.contact-mini a:hover {
-  text-decoration: underline;
-}
-
 /* ---- Portfolio Detail Pages ---- */
-
 .portfolio-project-meta {
   background: var(--global-bg-color);
   border: 1px solid var(--global-border-color);
-  border-radius: 6px;
   padding: 1em 1.4em;
   margin-bottom: 2em;
 }
@@ -384,8 +421,13 @@ html[data-theme="dark"] .filter-btn.active {
   color: var(--global-bg-color);
 }
 
-/* ---- Responsive Adjustments ---- */
+/* ---- Responsive ---- */
 @media (max-width: 768px) {
+  .hp-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   .portfolio-grid {
     grid-template-columns: 1fr;
   }
@@ -399,7 +441,7 @@ html[data-theme="dark"] .filter-btn.active {
   }
 }
 
-/* ---- Portfolio Detail Page Content: Images, Tables, Code ---- */
+/* ---- Portfolio Detail Page Content ---- */
 .page__content img {
   max-width: 100%;
   height: auto;
@@ -432,7 +474,6 @@ html[data-theme="dark"] .filter-btn.active {
 .page__content pre {
   max-width: 100%;
   overflow-x: auto;
-  border-radius: 4px;
   margin: 1em 0;
 }
 
@@ -445,7 +486,7 @@ html[data-theme="dark"] .filter-btn.active {
   color: var(--global-text-color-light);
 }
 
-/* Cleaner reading experience for project detail pages */
+/* Cleaner reading for project detail pages */
 .page__content h1 {
   font-size: 1.5em;
   margin: 1.5em 0 0.6em;
