@@ -40,16 +40,3 @@
     "vendor/font-awesome/solid",
     "vendor/font-awesome/brands"
 ;
-
-/* Widen sidebar for About Me text */
-@include breakpoint($large) {
-  .sidebar {
-    @include span(3 of 12);
-  }
-}
-
-@include breakpoint($x-large) {
-  .sidebar {
-    max-width: 300px;
-  }
-}

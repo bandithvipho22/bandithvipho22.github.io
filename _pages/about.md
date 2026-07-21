@@ -16,6 +16,12 @@ redirect_from:
   </div>
 </div>
 
+<div class="about-me-text">
+I am passionate about developing AI-driven solutions that deliver real-world impact, with a focus on computer vision and robotics. My core interests include deep learning, human pose estimation, and machine learning, where I specialize in translating cutting-edge research into practical, deployable systems. I am particularly motivated by the potential of intelligent models to improve human-computer interaction and address complex challenges through innovative design and implementation.
+</div>
+
+---
+
 <div class="section-header"><h2>Research Interests</h2></div>
 <hr class="section-divider">
 
