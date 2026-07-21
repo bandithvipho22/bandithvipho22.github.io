@@ -3,6 +3,7 @@ title: "MHFusionNet: Multiple Hypotheses Fusion-Based Approach For 3D Human Pose
 excerpt: "<br/><img src='/images/MH_Intro.png'>"
 collection: portfolio-1
 tags:
+  - ai
   - computer-vision
   - deep-learning
   - 3d-pose-estimation

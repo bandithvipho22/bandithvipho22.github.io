@@ -8,9 +8,9 @@ redirect_from:
 ---
 
 <div class="home-hero">
-  <p class="hero-subtitle" style="margin-top:0;">AI Researcher &bull; Computer Vision &bull; Robotic Lab Assistant</p>
+  <p class="hero-subtitle" style="margin-top:0;">AI Researcher &bull; Computer Vision &bull; Robotics</p>
   <div class="hero-links">
-    <a href="/portfolio/"><i class="fas fa-folder-open"></i> View Portfolio</a>
+    <a href="/portfolio/"><i class="fas fa-folder-open"></i> View Projects</a>
     <a href="/files/resume.pdf"><i class="fas fa-file-alt"></i> Download CV</a>
     <a href="https://github.com/bandithvipho22"><i class="fab fa-github"></i> GitHub</a>
     <a href="https://www.linkedin.com/in/bandithvipho22"><i class="fab fa-linkedin"></i> LinkedIn</a>
@@ -38,6 +38,8 @@ I am passionate about developing AI-driven solutions that deliver real-world imp
   <span class="skill-tag dl">Deep Learning</span>
   <span class="skill-tag dl">Diffusion Models</span>
   <span class="skill-tag ai">Human-Computer Interaction</span>
+  <span class="skill-tag ai">AI Agents</span>
+  <span class="skill-tag ai">Agentic AI Systems</span>
 </div>
 
 ---
@@ -49,16 +51,6 @@ I am passionate about developing AI-driven solutions that deliver real-world imp
 <hr class="section-divider">
 
 <div class="exp-card">
-  <h3>Robotic Lab Assistant & Part-time Robotic Coach</h3>
-  <p class="exp-meta"><strong>SekSaa Tech Academy</strong> &mdash; Phnom Penh, Cambodia &middot; <em>Present</em></p>
-  <ul>
-    <li>Managed inventory and prepared electronic components for the Robotics Lab</li>
-    <li>Designed and developed miniature AI projects (YOLO, OpenCV) and robotic educational projects (obstacle avoidance vehicles, smart lighting, IR remote-controlled robots, line-tracking robots)</li>
-    <li>Employed Micro:bit MakeCode, MicroPython, Arduino IDE, and Raspberry Pi</li>
-  </ul>
-</div>
-
-<div class="exp-card">
   <h3>Computer Vision Research Intern</h3>
   <p class="exp-meta"><strong>National Chung Cheng University</strong> &mdash; Chiayi, Taiwan &middot; <em>Mar &ndash; Jun 2025</em></p>
   <p style="margin:0.3em 0 0.5em; font-style:italic; font-size:0.92em;">MHFusionNet: Multiple Hypotheses Fusion-Based Approaches for 3D Human Pose Estimation</p>
@@ -68,6 +60,34 @@ I am passionate about developing AI-driven solutions that deliver real-world imp
     <li>Conducted training and evaluation of deep learning models for human posture analysis</li>
   </ul>
 </div>
+
+<div class="exp-card">
+  <h3>AI Engineering Intern</h3>
+  <p class="exp-meta"><strong>AI Farm Robotics</strong> &mdash; Phnom Penh, Cambodia &middot; <em>Aug &ndash; Nov 2024</em></p>
+  <p style="margin:0.3em 0 0.5em; font-style:italic; font-size:0.92em;">Sim-to-Real Reinforcement Learning for Robot Navigation</p>
+  <ul>
+    <li>Implemented RL algorithms (SAC) for autonomous navigation from random positions to targets in unknown environments</li>
+    <li>Utilized ROS2 and Gazebo for simulation-based training; deployed policies on physical robots</li>
+  </ul>
+</div>
+
+<div class="exp-card">
+  <h3>AI Engineering Intern</h3>
+  <p class="exp-meta"><strong>AI Farm Robotics</strong> &mdash; Phnom Penh, Cambodia &middot; <em>Aug &ndash; Nov 2023</em></p>
+  <p style="margin:0.3em 0 0.5em; font-style:italic; font-size:0.92em;">Robot Navigation using ROS2 and Nav2 Framework</p>
+  <ul>
+    <li>Constructed simulation environments in Gazebo and RViz for testing and visualization</li>
+    <li>Applied SLAM Toolbox for environment mapping; integrated path planning for differential drive robot navigation</li>
+  </ul>
+</div>
+
+---
+
+<div class="section-header">
+  <i class="fas fa-trophy" style="color: var(--global-link-color);"></i>
+  <h2>Extra-curriculum Activities</h2>
+</div>
+<hr class="section-divider">
 
 <div class="exp-card">
   <h3>Research & Development &mdash; Cambodian Sign Language Recognition</h3>
@@ -82,31 +102,11 @@ I am passionate about developing AI-driven solutions that deliver real-world imp
 </div>
 
 <div class="exp-card">
-  <h3>AI Engineering Intern</h3>
-  <p class="exp-meta"><strong>AI Farm Robotics</strong> &mdash; Phnom Penh, Cambodia &middot; <em>Aug &ndash; Nov 2024</em></p>
-  <p style="margin:0.3em 0 0.5em; font-style:italic; font-size:0.92em;">Sim-to-Real Reinforcement Learning for Robot Navigation</p>
-  <ul>
-    <li>Implemented RL algorithms (SAC) for autonomous navigation from random positions to targets in unknown environments</li>
-    <li>Utilized ROS2 and Gazebo for simulation-based training; deployed policies on physical robots</li>
-  </ul>
-</div>
-
-<div class="exp-card">
   <h3>Lead Programmer &mdash; ABU Robocon Competition 2024</h3>
   <p class="exp-meta"><strong>Institute of Technology of Cambodia</strong> &mdash; Phnom Penh, Cambodia &middot; <em>Aug &ndash; Nov 2024</em></p>
   <ul>
     <li>Developed ROS2-based control system for an autonomous ball-collecting robot</li>
     <li>Trained YOLO object detection model on custom dataset; quantized to TensorRT and deployed on Jetson AGX Xavier</li>
-  </ul>
-</div>
-
-<div class="exp-card">
-  <h3>AI Engineering Intern</h3>
-  <p class="exp-meta"><strong>AI Farm Robotics</strong> &mdash; Phnom Penh, Cambodia &middot; <em>Aug &ndash; Nov 2023</em></p>
-  <p style="margin:0.3em 0 0.5em; font-style:italic; font-size:0.92em;">Robot Navigation using ROS2 and Nav2 Framework</p>
-  <ul>
-    <li>Constructed simulation environments in Gazebo and RViz for testing and visualization</li>
-    <li>Applied SLAM Toolbox for environment mapping; integrated path planning for differential drive robot navigation</li>
   </ul>
 </div>
 

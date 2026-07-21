@@ -3,6 +3,7 @@ title: "Sim-To-Real Reinforcement Learning for Robot Navigation"
 excerpt: "<br/><img src='/images/sim_to_real.png'>"
 collection: portfolio-4
 tags:
+  - ai
   - robotics
   - deep-learning
   - simulation

@@ -3,6 +3,7 @@ title: "Object Detection using YOLO Model integrated with ROS2 for Autonomous Ro
 excerpt: "<br/><img src='/images/abu_object_detection.png'>"
 collection: portfolio-3
 tags:
+  - ai
   - computer-vision
   - robotics
   - edge-ai
