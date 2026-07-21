@@ -24,15 +24,9 @@ author_profile: true
   {% unless post.url contains '.html' or post.url contains '.png' %}
     {% assign img_src = nil %}
     {% if post.excerpt contains 'img src=' %}
-      {% assign excerpt_parts = post.excerpt | split: 'img src="' %}
-      {% assign after_src = excerpt_parts[1] | split: '"' %}
+      {% assign excerpt_parts = post.excerpt | split: "img src='" %}
+      {% assign after_src = excerpt_parts[1] | split: "'" %}
       {% assign img_src = after_src[0] %}
-    {% endif %}
-
-    {% if img_src and img_src != '' %}
-      {% unless img_src contains '://' %}
-        {% assign img_src = img_src | prepend: '/' %}
-      {% endunless %}
     {% endif %}
 
     <div class="portfolio-card" data-categories="{{ post.tags | join: ',' }}">

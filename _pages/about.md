@@ -21,7 +21,7 @@ sidebar:
 
 <div class="research-grid">
   <div class="research-column">
-    <h3>AI</h3>
+    <h3>AI &amp; Deep Learning</h3>
     <ul>
       <li>AI Agents</li>
       <li>Agentic Systems (MCP, agent memory)</li>
@@ -37,12 +37,13 @@ sidebar:
     <h3>Computer Vision &amp; Robotics</h3>
     <ul>
       <li>2D/3D Human Pose Estimation</li>
-      <li>Object Detection</li>
+      <li>Object Detection (YOLO, TensorRT)</li>
       <li>Optical Character Recognition (OCR)</li>
-      <li>Action Recognition</li>
-      <li>Video Surveillance</li>
+      <li>Action &amp; Gesture Recognition</li>
+      <li>Sign Language Recognition</li>
       <li>Autonomous Mobile Robots</li>
-      <li>Robot Navigation (Sim-to-Real)</li>
+      <li>Robot Navigation &amp; SLAM</li>
+      <li>Sim-to-Real Transfer</li>
     </ul>
   </div>
 </div>
