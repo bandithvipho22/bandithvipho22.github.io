@@ -11,7 +11,6 @@ redirect_from:
   <p class="hero-subtitle">AI Researcher &bull; Computer Vision &bull; Robotics</p>
   <div class="hero-links">
     <a href="/portfolio/">View Projects</a>
-    <a href="/files/resume.pdf">Download CV</a>
     <a href="https://github.com/bandithvipho22">GitHub</a>
     <a href="https://www.linkedin.com/in/bandithvipho22">LinkedIn</a>
   </div>
