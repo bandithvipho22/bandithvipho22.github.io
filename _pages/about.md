@@ -5,37 +5,46 @@ author_profile: true
 redirect_from:
   - /about/
   - /about.html
----
-
-<div class="home-hero">
-  <p class="hero-subtitle">AI Researcher &bull; Computer Vision &bull; Robotics</p>
-  <div class="hero-links">
-    <a href="/portfolio/">View Projects</a>
-    <a href="https://github.com/bandithvipho22">GitHub</a>
-    <a href="https://www.linkedin.com/in/bandithvipho22">LinkedIn</a>
-  </div>
-</div>
-
-I am passionate about developing AI-driven solutions that deliver real-world impact, with a focus on computer vision and robotics. My core interests include deep learning, human pose estimation, and machine learning, where I specialize in translating cutting-edge research into practical, deployable systems. I am particularly motivated by the potential of intelligent models to improve human-computer interaction and address complex challenges through innovative design and implementation.
-
+sidebar:
+  - title: "About Me"
+    text: >-
+      <div class="sidebar-about-text">
+      I am passionate about developing AI-driven solutions that deliver real-world impact,
+      with a focus on computer vision and robotics. My core interests include deep learning,
+      human pose estimation, and machine learning, where I specialize in translating cutting-edge
+      research into practical, deployable systems.
+      </div>
 ---
 
 <div class="section-header"><h2>Research Interests</h2></div>
 <hr class="section-divider">
 
-<div class="skill-tags">
-  <span class="skill-tag">Autonomous Mobile Robots</span>
-  <span class="skill-tag">Computer Vision</span>
-  <span class="skill-tag">2D/3D Human Pose Estimation</span>
-  <span class="skill-tag">Sign Language Recognition</span>
-  <span class="skill-tag">Action Recognition</span>
-  <span class="skill-tag">Video Surveillance</span>
-  <span class="skill-tag">Edge AI Deployment</span>
-  <span class="skill-tag">Deep Learning</span>
-  <span class="skill-tag">Diffusion Models</span>
-  <span class="skill-tag">Human-Computer Interaction</span>
-  <span class="skill-tag">AI Agents</span>
-  <span class="skill-tag">Agentic AI Systems</span>
+<div class="research-grid">
+  <div class="research-column">
+    <h3>AI</h3>
+    <ul>
+      <li>AI Agents</li>
+      <li>Agentic Systems (MCP, agent memory)</li>
+      <li>Large Language Models (LLM)</li>
+      <li>LLM on Local (on-device inference)</li>
+      <li>Deep Learning</li>
+      <li>Reinforcement Learning</li>
+      <li>Diffusion Models</li>
+      <li>Edge AI Deployment</li>
+    </ul>
+  </div>
+  <div class="research-column">
+    <h3>Computer Vision &amp; Robotics</h3>
+    <ul>
+      <li>2D/3D Human Pose Estimation</li>
+      <li>Object Detection</li>
+      <li>Optical Character Recognition (OCR)</li>
+      <li>Action Recognition</li>
+      <li>Video Surveillance</li>
+      <li>Autonomous Mobile Robots</li>
+      <li>Robot Navigation (Sim-to-Real)</li>
+    </ul>
+  </div>
 </div>
 
 ---
@@ -156,7 +165,7 @@ I am passionate about developing AI-driven solutions that deliver real-world imp
 </div>
 
 <p style="text-align:center; margin-top:1.5em;">
-  <a href="/portfolio/" class="skill-tag" style="font-size:0.9em; padding:6px 20px;">View All Projects &rarr;</a>
+  <a href="/portfolio/" style="display:inline-block; padding:6px 20px; border:1px solid var(--global-border-color); border-radius:4px; font-size:0.9em; color: var(--global-text-color); text-decoration:none;">View All Projects &rarr;</a>
 </p>
 
 ---
