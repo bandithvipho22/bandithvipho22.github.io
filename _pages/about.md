@@ -5,16 +5,16 @@ author_profile: true
 redirect_from:
   - /about/
   - /about.html
-sidebar:
-  - title: "About Me"
-    text: >-
-      <div class="sidebar-about-text">
-      I am passionate about developing AI-driven solutions that deliver real-world impact,
-      with a focus on computer vision and robotics. My core interests include deep learning,
-      human pose estimation, and machine learning, where I specialize in translating cutting-edge
-      research into practical, deployable systems.
-      </div>
 ---
+
+<div class="page-intro">
+  <p>AI Researcher &mdash; Computer Vision &mdash; Robotics</p>
+  <div class="intro-links">
+    <a href="/portfolio/">View Projects</a>
+    <a href="https://github.com/bandithvipho22">GitHub</a>
+    <a href="https://www.linkedin.com/in/bandithvipho22">LinkedIn</a>
+  </div>
+</div>
 
 <div class="section-header"><h2>Research Interests</h2></div>
 <hr class="section-divider">

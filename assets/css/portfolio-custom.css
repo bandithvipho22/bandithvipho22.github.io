@@ -2,18 +2,59 @@
    CUSTOM PORTFOLIO & HOMEPAGE STYLING
    ========================================================================== */
 
-/* ---- Sidebar "About Me" section ---- */
-.sidebar .sidebar-about-text {
-  font-size: 0.82em;
+/* ---- Sidebar "About Me" text ---- */
+.author__about-me {
+  font-size: 0.78em;
   line-height: 1.5;
   color: var(--global-text-color-light);
+  margin-top: 0.8em;
+  padding-top: 0.8em;
+  border-top: 1px solid var(--global-border-color);
 }
 
-.sidebar .sidebar-about-text p {
+/* Visual separation: sidebar with right border */
+@media screen and (min-width: 64em) {
+  .sidebar {
+    border-right: 1px solid var(--global-border-color);
+    padding-right: 1.2em;
+  }
+}
+
+/* ---- Homepage Intro Bar ---- */
+.page-intro {
+  text-align: center;
+  padding: 1em 1.5em;
+  margin-bottom: 2em;
+  border: 1px solid var(--global-border-color);
+  border-radius: 6px;
+  background: var(--global-bg-color);
+}
+
+.page-intro p {
+  font-size: 1.05em;
+  color: var(--global-text-color-light);
   margin: 0 0 0.6em;
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
+}
+
+.intro-links {
+  display: flex;
+  justify-content: center;
+  gap: 0.6em;
+  flex-wrap: wrap;
+}
+
+.intro-links a {
+  font-size: 0.88em;
+  padding: 4px 14px;
+  border: 1px solid var(--global-border-color);
+  border-radius: 4px;
+  color: var(--global-text-color);
+  text-decoration: none;
+}
+
+.intro-links a:hover {
+  border-color: var(--global-link-color);
+  color: var(--global-link-color);
 }
 
 /* ---- Research Interests Grid ---- */
