@@ -81,7 +81,6 @@
 }
 
 .research-column {
-  background: var(--global-code-background-color);
   border: 1px solid var(--global-border-color);
   padding: 1.2em 1.4em;
 }
@@ -111,30 +110,15 @@
   }
 }
 
-/* ---- Work Experience / Extra-curriculum (Timeline style) ---- */
+/* ---- Work Experience / Extra-curriculum ---- */
 .exp-card {
-  display: flex;
-  gap: 1em;
   padding-bottom: 1.2em;
-  margin-bottom: 1em;
+  margin-bottom: 1.2em;
   border-bottom: 1px solid var(--global-border-color);
 }
 
 .exp-card:last-child {
   border-bottom: none;
-}
-
-.exp-dot {
-  flex-shrink: 0;
-  width: 8px;
-  height: 8px;
-  margin-top: 0.45em;
-  border-radius: 50%;
-  background: var(--global-border-color);
-}
-
-.exp-content {
-  flex: 1;
 }
 
 .exp-content h3 {
@@ -185,7 +169,6 @@
 }
 
 .skill-category {
-  background: var(--global-code-background-color);
   border: 1px solid var(--global-border-color);
   padding: 0.9em 1.1em;
 }

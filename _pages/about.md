@@ -57,7 +57,6 @@ redirect_from:
 <div class="section-header"><h2>Work Experience</h2></div>
 
 <div class="exp-card">
-  <div class="exp-dot"></div>
   <div class="exp-content">
     <h3>Computer Vision Research Intern</h3>
     <p class="exp-meta"><strong>National Chung Cheng University</strong> — Chiayi, Taiwan &middot; <em>Mar – Jun 2025</em></p>
@@ -71,7 +70,6 @@ redirect_from:
 </div>
 
 <div class="exp-card">
-  <div class="exp-dot"></div>
   <div class="exp-content">
     <h3>AI Engineering Intern</h3>
     <p class="exp-meta"><strong>AI Farm Robotics</strong> — Phnom Penh, Cambodia &middot; <em>Aug – Nov 2024</em></p>
@@ -84,7 +82,6 @@ redirect_from:
 </div>
 
 <div class="exp-card">
-  <div class="exp-dot"></div>
   <div class="exp-content">
     <h3>AI Engineering Intern</h3>
     <p class="exp-meta"><strong>AI Farm Robotics</strong> — Phnom Penh, Cambodia &middot; <em>Aug – Nov 2023</em></p>
@@ -99,7 +96,6 @@ redirect_from:
 <div class="section-header"><h2>Extra-curriculum Activities</h2></div>
 
 <div class="exp-card">
-  <div class="exp-dot"></div>
   <div class="exp-content">
     <h3>R&D — Cambodian Sign Language Recognition and Translation</h3>
     <p class="exp-meta"><strong>Independent Research</strong> — Phnom Penh, Cambodia &middot; <em>Sep 2024 – Present</em></p>
@@ -113,7 +109,6 @@ redirect_from:
 </div>
 
 <div class="exp-card">
-  <div class="exp-dot"></div>
   <div class="exp-content">
     <h3>Lead Programmer — ABU Robocon Competition 2024</h3>
     <p class="exp-meta"><strong>Institute of Technology of Cambodia</strong> — Phnom Penh, Cambodia &middot; <em>Aug – Nov 2024</em></p>
